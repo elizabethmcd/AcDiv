@@ -1,0 +1,17 @@
+##################
+# granules-batch2-repair-filter.sub
+# Submission script for repairing PEs with bbmap and filter with bbudk
+# Elizabeth McDaniel
+##################
+
+request_cpus = 4
+request_memory = 15GB
+
+executable = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/executables/granules-batch2-repair-filter.sh
+arguments = $(in) $(repair) $(clean)
+
+output = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/outs/$(Cluster)_$(Process)_$(sample)_repair_filter.out
+error = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/errs/$(Cluster)_$(Process)_$(sample)_repair_filter.err
+log = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/logs/$(Cluster)_$(Process)_$(sample)_repair_filter.log
+
+queue in,repair,clean from metadata/granules-batch2-samples.txt

@@ -1,0 +1,15 @@
+#####################
+# Coassemble metagenomic samples using metaspades
+# Elizabeth McDaniel
+#####################
+
+request_cpus = 12
+request_memory = 200GB
+
+executable = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/executables/granules-batch1-coassembly.sh
+
+output = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/outs/$(Cluster)_$(Process)_spades_coassembly.out
+error = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/errs/$(Cluster)_$(Process)_spades_coassembly.err
+log = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/logs/$(Cluster)_$(Process)_spades_coassembly.log
+
+queue
