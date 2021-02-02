@@ -1,0 +1,16 @@
+##############################
+# anvi-gen-contigs-db submit
+##############################
+
+universe = vanilla
+executable = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/executables/make-contig-dbs.sh
+
+request_cpus = 4
+request_memory = 10GB
+arguments = $(fasta)
+
+output = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/outs/$(Cluster)_$(Process)_anvi-contigs.out
+error = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/errs/$(Cluster)_$(Process)_anvi-contigs.err
+log = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/logs/$(Cluster)_$(Process)_anvi-contigs.log
+
+queue fasta from /home/GLBRCORG/emcdaniel/EBPR/AcDiv/metadata/Acc_high_quality_genomes.txt

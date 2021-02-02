@@ -1,0 +1,15 @@
+##############################
+# anvi-pangenome submit
+##############################
+
+universe = vanilla
+executable = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/executables/anvi-pangenome.sh
+
+request_cpus = 12
+request_memory = 20GB
+
+output = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/outs/$(Cluster)_$(Process)_anvi-pang.out
+error = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/errs/$(Cluster)_$(Process)_anvi-pang.err
+log = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/logs/$(Cluster)_$(Process)_anvi-pang.log
+
+queue

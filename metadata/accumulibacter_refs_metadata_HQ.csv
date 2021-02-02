@@ -1,4 +1,4 @@
-﻿Accession,Bioproject,name,code,completion,contamination,size_Mbp,contigs,GC_content,clade,Reference
+﻿Accession,Bioproject,name,code,completion,contamination,size_bp,contigs,GC_content,clade,Reference
 GCA_000585075.1,PRJNA236439,Candidatus Accumulibacter sp BA-93,BA-93,100,0.03,4626262,168,63.8,IA,Skennerton et al. 2015 Env. Micro
 UW8-POB,TBD,Candidatus Accumulibacter UW8-POB,UW8-POB,100,0,4262696,49,64.2,IA,McDaniel et al. 2021
 UW3,IMG,Candidatus Accumulibacter UW3,UW3,99.94,0.03,4329894,110,63.9,IA,Flowers et al. 2013 ISMEJ
@@ -9,7 +9,6 @@ GCA_000987445.1,PRJNA238420,Candidatus Accumulibacter phosphatis HKU1,HKU1,90.06
 Delftensis,NA,Candidatus Accumulibacter delftensis,DELFT,100,0.187,5278942,361,62.19,IC,Rubio-Rincon et al. 2019 Water Research
 GCA_012939955.1,PRJNA528323,Candidatus Accumulibacter phosphatis SBR_S,SBR_S,97.33,0.5,5044133,149,62.3,IC,Cornell
 GCA_003332265.1,PRJNA322674,Candidatus Accumulibacter phosphatis UW-LDO,UW-LDO,95.24,0.7,4701482,187,62.5,IC,Camejo et al. 2019 mSystems
-GCA_014879755.1,PRJNA576469 ,Candidatus Accumulibacter Acc IF,AccIF,96.5,4.3,4400000,412,70,IF,Wang 2020 et al.bioRxiv
 UW9-POB,TBD,Candidatus Accumulibacter UW9-POB,UW9-POB,100,0,4931494,126,64.1,IIA,McDaniel et al. 2021
 GCA_000024165.1,PRJNA29435,Candidatus Accumulibacter phosphatis UW1,UW1,99.84,0.24,5306133,4,64,IIA,Garcia-Martin et al. 2006 Nat. Biotech.
 UW5,PRJNA668760,Candidatus Accumulibacter UW5,UW5,98.99,5.24,4882959,68,64.3,IIA,McDaniel and Moya et al. 2021
@@ -25,7 +24,6 @@ GCA_000584975.2,PRJNA236434,Candidatus Accumulibacter sp SK-02,SK-02,97.62,1.59,
 GCA_012940005.1,PRJNA528323,Candidatus Accumulibacter phosphatis SBR_L,SBR_L,96.85,0.98,5024437,167,61.7,IIC,Cornell
 GCA_000584955.2,PRJNA231877,Candidatus Accumulibacter sp SK-01,SK-01,93.73,1.19,4561076,779,61.7,IIC,Skennerton et al. 2015 Env. Micro
 GCA_000987395.1,PRJNA245054,Candidatus Accumulibacter phosphatis HKU2,HKU2,92.29,2.86,4262673,370,61.1,IIC,Mao et al. 2017 Env. Sci. Tech.
-GCA_000585035.2,PRJNA236437,Candidatus Accumulibacter sp BA-91,BA-91,81.76,3.15,4322820,1218,61.9,IIC,Skennerton et al. 2015 Env. Micro
 UW12-POB,TBD,Candidatus Accumulibacter UW12-POB,UW12-POB,98.1,0.74,4564354,91,62.7,IID,McDaniel et al. 2021
 EsbW_18-Q3-R4-48_BATAC.285,NA,Candidatus Accumulibacter,EsbW_18-Q3-R4-48_BATAC.285,96.67,3.39,5402764,40,62.7,IID,Singleton et al. 2020 Nature Comms.
 GCA_013347225.1,PRJNA611629,Candidatus Accumulibacter phosphatis SSB1,SSB1,99.05,0.03,5039009,1,66,IIF,SCELSE
@@ -33,10 +31,7 @@ UW7,PRJNA668760,Candidatus Accumulibacter UW7,UW7,98.97,3.04,4870756,102,66.3,II
 UW13-POB,TBD,Candidatus Accumulibacter UW13-POB,UW13-POB,97.14,4.39,5447020,245,65.9,IIF,McDaniel et al. 2021
 GCA_005524045.1,PRJNA532338,Candidatus Accumulibacter sp SCELSE-1,SCELSE-1,95.24,0.6,4456818,253,66.1,IIF,Qiu et al. 2020 Env. Sci. Tech.
 GCA_000585015.1,PRJNA236436,Candidatus Accumulibacter sp SK-12,SK-12,92.6,0.05,4412715,331,66.3,IIF,Skennerton et al. 2015 Env. Micro
-GCA_000585095.1,PRJNA236440,Candidatus Accumulibacter sp BA-94,BA-94,79.35,8.19,3097332,935,64.9,IIF,Skennerton et al. 2015 Env. Micro
-GCA_000584995.1,PRJNA236435,Candidatus Accumulibacter sp SK-11,SK-11,76.78,0.06,4700180,1411,65.5,IIF,Skennerton et al. 2015 Env. Micro
 Fred_18-Q3-R57-64_BAT3C.720,NA,Candidatus Accumulibacter,Fred_18-Q3-R57-64_BAT3C.720,93.81,0.98,5041483,13,62.3,IIG,Singleton et al. 2020 Nature Comms.
 GCA_001897745.1,PRJNA279279,Candidatus Accumulibacter sp 66-26,66-26,99.76,0.03,4385439,51,66.1,unknown,Kantor et al. 2015 Env. Micro
 GCA_900089955.1,PRJEB13978,Candidatus Accumulibacter aalborgensis,AALB,99.52,0.06,4707069,181,62.3,unknown,Albertsen et al. 2016 Frontiers Micro.
 GCA_013823155.1,PRJNA323575,Candidatus Accumulibacter phosphatis DS2_011,DS2_011,98.37,0,3761345,61,66.9,unknown,Zhang et al. 2017 Frontiers Micro.
-GCA_013822655.1,PRJNA323575,Candidatus Accumulibacter phosphatis PB2_038,PB2_038,65.59,9.55,2789083,422,67.8,unknown,Zhang et al. 2017 Frontiers Micro.
