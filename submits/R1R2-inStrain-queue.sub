@@ -5,7 +5,7 @@
 executable = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/executables/R1R2-inStrain-queue.sh
 
 request_cpus = 4
-request_memory = 50GB
+request_memory = 150GB
 arguments = $(mapping) $(genome) $(sampleDate) $(scaffolds)
 
 output = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/outs/$(Cluster)_$(Process)_inStrain.out

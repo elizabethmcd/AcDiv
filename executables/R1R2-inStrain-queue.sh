@@ -15,7 +15,7 @@ genome=$2
 sampleDate=$3
 scaffolds=$4
 
-fasta=/home/GLBRCORG/emcdaniel/EBPR/AcDiv/ref_genomes/annotations/$genome/$genome.fna
+fasta=/home/GLBRCORG/emcdaniel/EBPR/AcDiv/mappingResults/bowtie-refs/ref_genomes/$genome.fasta
 genes=/home/GLBRCORG/emcdaniel/EBPR/AcDiv/ref_genomes/annotations/$genome/$genome.genes.fna
 
 # cd to location of inStrain results
