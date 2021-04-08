@@ -1,0 +1,15 @@
+##############################
+# R1R2 inStrain Queues
+##############################
+
+executable = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/executables/R1R2-inStrain-queue.sh
+
+request_cpus = 4
+request_memory = 50GB
+arguments = $(mapping) $(genome) $(sampleDate) $(scaffolds)
+
+output = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/outs/$(Cluster)_$(Process)_inStrain.out
+error = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/errs/$(Cluster)_$(Process)_inStrain.err
+log = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/logs/$(Cluster)_$(Process)_inStrain.log
+
+queue mapping,genome,sampleDate,scaffolds from metadata/R1R2-inStrain-queue.txt

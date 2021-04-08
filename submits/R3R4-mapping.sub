@@ -1,0 +1,15 @@
+##############################
+# R3R4 Bowtie Mapping Queues
+##############################
+
+executable = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/executables/bowtie-mapping-queues.sh
+
+request_cpus = 4
+request_memory = 50GB
+arguments = $(fastq) $(ref) $(output)
+
+output = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/outs/$(Cluster)_$(Process)_bowtie2mapping.out
+error = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/errs/$(Cluster)_$(Process)_bowtie2mapping.err
+log = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/logs/$(Cluster)_$(Process)_bowtie2mapping.log
+
+queue fastq,ref,output from metadata/R3R4-Acc-IA-IIA-mapping-queues.txt
