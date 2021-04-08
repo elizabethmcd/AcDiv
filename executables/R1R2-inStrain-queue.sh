@@ -22,9 +22,6 @@ genes=/home/GLBRCORG/emcdaniel/EBPR/AcDiv/ref_genomes/annotations/$genome/$genom
 
 cd $sampleDate
 
-# clear preexisting runs
-rm -rf *
-
 # profile command
 
 inStrain profile $mapping $fasta -o $genome.IS -p 8 -g $genes -s /home/GLBRCORG/emcdaniel/EBPR/AcDiv/metagenomes/R1R2/inStrain/$scaffolds.stb
