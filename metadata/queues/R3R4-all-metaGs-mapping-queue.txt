@@ -1,0 +1,2 @@
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/metagenomes/R3R4/cleaned_fastqs/R3R4_EBPR_all_metagenomes.fastq	/home/GLBRCORG/emcdaniel/EBPR/AcDiv/mappingResults/bowtie-refs/UW1_UW3_bt2/UW1_UW3.fasta
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/metagenomes/R3R4/cleaned_fastqs/R3R4_EBPR_all_metagenomes.fastq	/home/GLBRCORG/emcdaniel/EBPR/AcDiv/mappingResults/bowtie-refs/UW4_UW5_bt2/UW4_UW5.fasta
