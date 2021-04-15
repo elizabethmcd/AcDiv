@@ -1,0 +1,15 @@
+##############################
+# Danish WWTPs Metagenomes Quality Filtering Jobs Queue
+##############################
+
+executable = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/executables/Danish-WWTPs-filtering.sh
+
+request_cpus = 6
+request_memory = 100GB
+arguments = $(file1) $(file2)
+
+output = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/outs/$(Cluster)_$(Process)_danish-filtering.out
+error = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/errs/$(Cluster)_$(Process)_danish-filtering.err
+log = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/logs/$(Cluster)_$(Process)_danish-filtering.log
+
+queue file1,file2 from metadata/Danish-metagenomes.txt

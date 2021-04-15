@@ -1,0 +1,15 @@
+##############################
+# R3R4 Samtools Queues
+##############################
+
+executable = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/executables/R3R4-samtools-queues.sh
+
+request_cpus = 6
+request_memory = 50GB
+arguments = $(file)
+
+output = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/outs/$(Cluster)_$(Process)_samtools.out
+error = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/errs/$(Cluster)_$(Process)_samtools.err
+log = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/logs/$(Cluster)_$(Process)_samtools.log
+
+queue file from metadata/R3R4-samtools-queues.txt

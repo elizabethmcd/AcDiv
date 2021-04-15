@@ -17,4 +17,3 @@ cd /home/GLBRCORG/emcdaniel/EBPR/AcDiv/mappingResults/R3R4
 /opt/bifxapps/samtools-1.9/bin/samtools view -S -b $outname.sam > $outname.bam
 /opt/bifxapps/samtools-1.9/bin/samtools sort $outname.bam -o $outname.sorted.bam
 /opt/bifxapps/samtools-1.9/bin/samtools index $outname.sorted.bam $outname.sorted.bam.bai
-

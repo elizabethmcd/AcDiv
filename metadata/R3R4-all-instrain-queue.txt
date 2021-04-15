@@ -1,0 +1,4 @@
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/metagenomes/R3R4/all_combined/UW1_UW3-vs-R3R4_EBPR_all_metagenomes.fastq.sam	UW1	UW1_UW3_scaffolds
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/metagenomes/R3R4/all_combined/UW4_UW5-vs-R3R4_EBPR_all_metagenomes.fastq.sam	UW4	UW4_UW5_scaffolds
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/metagenomes/R3R4/all_combined/UW1_UW3-vs-R3R4_EBPR_all_metagenomes.fastq.sam	UW3	UW1_UW3_scaffolds
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/metagenomes/R3R4/all_combined/UW4_UW5-vs-R3R4_EBPR_all_metagenomes.fastq.sam	UW5	UW4_UW5_scaffolds

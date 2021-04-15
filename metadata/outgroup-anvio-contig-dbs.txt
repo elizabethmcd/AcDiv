@@ -1,0 +1,12 @@
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/anvio/outgroup_contig_dbs/Aved_18-Q3-R54-62_BAT3C.309.db
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/anvio/outgroup_contig_dbs/Bjer_18-Q3-R1-45_MAXAC.011.db
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/anvio/outgroup_contig_dbs/Bjer_18-Q3-R1-45_MAXAC.014.db
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/anvio/outgroup_contig_dbs/Ega_18-Q3-R5-49_MAXAC.071.db
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/anvio/outgroup_contig_dbs/EsbE_18-Q3-R3-47_MAXAC.131.db
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/anvio/outgroup_contig_dbs/EsbW_18-Q3-R4-48_BAT3C.275.db
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/anvio/outgroup_contig_dbs/Fred_18-Q3-R57-64_BAT3C.162.db
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/anvio/outgroup_contig_dbs/Hade_18-Q3-R52-61_BATAC.364.db
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/anvio/outgroup_contig_dbs/Hjor_18-Q3-R7-51_MAXAC.006.db
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/anvio/outgroup_contig_dbs/Hjor_18-Q3-R7-51_MAXAC.072.db
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/anvio/outgroup_contig_dbs/Ribe_18-Q3-R11-54_MAXAC.030.db
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/anvio/outgroup_contig_dbs/Vibo_18-Q3-R45-57_MAXAC.072.db

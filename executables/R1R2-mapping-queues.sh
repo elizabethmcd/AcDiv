@@ -5,8 +5,8 @@ fastq=$1
 ref=$2
 output=$3 
 
-samplename=basename($file $fastq .qced.fastq)
-refname=basename($file $ref .fasta)
+samplename=$(basename $fastq .qced.fastq)
+refname=$(basename $ref .fasta)
 outname=$refname-vs-$samplename
 
 # mapping command

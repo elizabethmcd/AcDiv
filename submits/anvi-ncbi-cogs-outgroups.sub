@@ -3,7 +3,7 @@
 ##############################
 
 universe = vanilla
-executable = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/executables/anvi-ncbi-cogs-annotate.sh
+executable = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/executables/anvi-ncbi-cogs-outgroups.sh
 
 request_cpus = 12
 request_memory = 20GB
@@ -13,4 +13,4 @@ output = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/outs/$(Cluster)_$(Process)_anvi-ncb
 error = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/errs/$(Cluster)_$(Process)_anvi-ncbi.err
 log = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/logs/$(Cluster)_$(Process)_anvi-ncbi.log
 
-queue contigs from /home/GLBRCORG/emcdaniel/EBPR/AcDiv/metadata/anvio-contig-dbs.txt
+queue contigs from /home/GLBRCORG/emcdaniel/EBPR/AcDiv/metadata/outgroup-anvio-contig-dbs.txt

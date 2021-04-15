@@ -1,4 +1,4 @@
-#! /bin/bash 
+#! /bin/bash
 
 # load inStrain environment
 export PATH=/home/GLBRCORG/emcdaniel/anaconda3/bin:$PATH

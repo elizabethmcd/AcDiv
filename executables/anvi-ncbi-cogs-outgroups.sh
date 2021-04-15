@@ -7,7 +7,7 @@ unset $PYTHONPATH
 conda activate anvio-6.2
 
 # cd where data is
-cd /home/GLBRCORG/emcdaniel/EBPR/AcDiv/anvio/contig_dbs
+cd /home/GLBRCORG/emcdaniel/EBPR/AcDiv/anvio/outgroup_contig_dbs
 
 # arguments
 contigs=$1

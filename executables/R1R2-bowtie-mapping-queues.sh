@@ -6,9 +6,6 @@ ref=$2
 
 samplename=$(basename $fastq .qced.fastq)
 refname=$(basename $ref .fasta)
-
-samplename=basename($file $fastq .qced.fastq)
-refname=basename($file $ref .fasta)
 outname=$refname-vs-$samplename
 
 cd /home/GLBRCORG/emcdaniel/EBPR/AcDiv/mappingResults/R1R2

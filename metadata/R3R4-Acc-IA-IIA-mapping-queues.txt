@@ -1,0 +1,6 @@
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/metagenomes/R3R4/cleaned_fastqs/EBPRWIReactor34.cleaned.fastq	/home/GLBRCORG/emcdaniel/EBPR/AcDiv/mappingResults/bowtie-refs/UW1_UW3_bt2/UW1_UW3.fasta
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/metagenomes/R3R4/cleaned_fastqs/EBPRWIReactor3.cleaned.fastq	/home/GLBRCORG/emcdaniel/EBPR/AcDiv/mappingResults/bowtie-refs/UW1_UW3_bt2/UW1_UW3.fasta
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/metagenomes/R3R4/cleaned_fastqs/EBPRWIReactor4.cleaned.fastq	/home/GLBRCORG/emcdaniel/EBPR/AcDiv/mappingResults/bowtie-refs/UW1_UW3_bt2/UW1_UW3.fasta
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/metagenomes/R3R4/cleaned_fastqs/EBPRWIReactor34.cleaned.fastq	/home/GLBRCORG/emcdaniel/EBPR/AcDiv/mappingResults/bowtie-refs/UW4_UW5_bt2/UW4_UW5.fasta
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/metagenomes/R3R4/cleaned_fastqs/EBPRWIReactor3.cleaned.fastq	/home/GLBRCORG/emcdaniel/EBPR/AcDiv/mappingResults/bowtie-refs/UW4_UW5_bt2/UW4_UW5.fasta
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/metagenomes/R3R4/cleaned_fastqs/EBPRWIReactor4.cleaned.fastq	/home/GLBRCORG/emcdaniel/EBPR/AcDiv/mappingResults/bowtie-refs/UW4_UW5_bt2/UW4_UW5.fasta

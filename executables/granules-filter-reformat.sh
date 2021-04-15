@@ -8,7 +8,7 @@ reformat=$5
 
 # fastp QC job
 
-~/bin/fastp -i $file1 -I $file2 -o "$output".qced.R1.fastq -O "$output".qced.R2.fastq --cut_tail -h "$name".html
+~/bin/fastp -i $file1 -I $file2 -o "$output".qced.R1.fastq -O "$output".qced.R2.fastq --cut_tail -h $name.html
 
 # reformat PE to interleaved
 

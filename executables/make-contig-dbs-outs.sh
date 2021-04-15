@@ -7,7 +7,7 @@ unset $PYTHONPATH
 conda activate anvio-6.2
 
 # cd where data is
-cd /home/GLBRCORG/emcdaniel/EBPR/AcDiv/anvio/high_qual_refs
+cd /home/GLBRCORG/emcdaniel/EBPR/AcDiv/anvio/outgroup_genomes
 
 # arguments
 fasta=$1

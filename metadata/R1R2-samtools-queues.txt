@@ -1,0 +1,9 @@
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/mappingResults/R1R2/UW1_UW3-vs-2008-04-24-EBPR.sam
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/mappingResults/R1R2/UW1_UW3-vs-2011-01-10-EBPR.sam
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/mappingResults/R1R2/UW1_UW3-vs-2013-05-13-EBPR.sam
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/mappingResults/R1R2/UW1_UW3-vs-2013-05-23-EBPR.sam
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/mappingResults/R1R2/UW4_UW5-vs-2009-02-02-EBPR.sam
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/mappingResults/R1R2/UW4_UW5-vs-2010-10-04-EBPR.sam
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/mappingResults/R1R2/UW4_UW5-vs-2011-01-10-EBPR.sam
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/mappingResults/R1R2/UW4_UW5-vs-2013-05-13-EBPR.sam
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/mappingResults/R1R2/UW4_UW5-vs-2013-05-23-EBPR.sam

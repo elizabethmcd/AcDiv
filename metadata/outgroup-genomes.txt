@@ -1,0 +1,12 @@
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/anvio/outgroup_genomes/Aved_18-Q3-R54-62_BAT3C.309.fa
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/anvio/outgroup_genomes/Bjer_18-Q3-R1-45_MAXAC.011.fa
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/anvio/outgroup_genomes/Bjer_18-Q3-R1-45_MAXAC.014.fa
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/anvio/outgroup_genomes/Ega_18-Q3-R5-49_MAXAC.071.fa
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/anvio/outgroup_genomes/EsbE_18-Q3-R3-47_MAXAC.131.fa
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/anvio/outgroup_genomes/EsbW_18-Q3-R4-48_BAT3C.275.fa
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/anvio/outgroup_genomes/Fred_18-Q3-R57-64_BAT3C.162.fa
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/anvio/outgroup_genomes/Hade_18-Q3-R52-61_BATAC.364.fa
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/anvio/outgroup_genomes/Hjor_18-Q3-R7-51_MAXAC.006.fa
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/anvio/outgroup_genomes/Hjor_18-Q3-R7-51_MAXAC.072.fa
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/anvio/outgroup_genomes/Ribe_18-Q3-R11-54_MAXAC.030.fa
+/home/GLBRCORG/emcdaniel/EBPR/AcDiv/anvio/outgroup_genomes/Vibo_18-Q3-R45-57_MAXAC.072.fa

@@ -10,4 +10,4 @@ conda activate anvio-6.2
 cd /home/GLBRCORG/emcdaniel/EBPR/AcDiv/anvio/contig_dbs
 
 # run the construction of pangenome
-anvi-pan-genome -g ACC-OUTS-GENOMES.db --project-name "Accumulibacter_Pangenome" --output-dir ACCUMPANG --num-threads 10 --minbit 0.5 --mcl-inflation 5 --sensitive 
+anvi-pan-genome -g ACC-GENOMES.db --project-name "Accumulibacter_Pangenome" --output-dir ACCUMPANG --num-threads 10 --minbit 0.5 --mcl-inflation 2 --sensitive --min-occurrence 2 
