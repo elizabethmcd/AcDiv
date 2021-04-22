@@ -1,0 +1,15 @@
+##############################
+# Danish WWTPs bowtie mapping queue
+##############################
+
+executable = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/executables/Danish-WWTPs-bowtie-mapping.sh
+
+request_cpus = 6
+request_memory = 200GB
+arguments = $(r1) $(r2) $(sample)
+
+output = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/outs/$(Cluster)_$(Process)_Danish_bowtie2mapping.out
+error = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/errs/$(Cluster)_$(Process)_Danish_bowtie2mapping.err
+log = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/logs/$(Cluster)_$(Process)_Danish_bowtie2mapping.log
+
+queue r1,r2,sample from metadata/Danish-WWTPs-mapping-queues.txt

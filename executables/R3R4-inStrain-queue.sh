@@ -18,8 +18,8 @@ genes=/home/GLBRCORG/emcdaniel/EBPR/AcDiv/ref_genomes/annotations/$genome/$genom
 
 # cd to location of inStrain results
 
-cd /home/GLBRCORG/emcdaniel/EBPR/AcDiv/metagenomes/R3R4/inStrain/$reactor
+cd /home/GLBRCORG/emcdaniel/EBPR/AcDiv/metagenomes/R3R4/R3R4_UW1_UW3_mappingResults/
 
 # profile command
 
-inStrain profile $mapping $fasta -o $genome.IS -p 8 -g $genes -s /home/GLBRCORG/emcdaniel/EBPR/AcDiv/metagenomes/R3R4/inStrain/$scaffolds.stb
+inStrain profile $mapping $fasta -o ../inStrain/$reactor/$genome.IS -p 8 -g $genes -s /home/GLBRCORG/emcdaniel/EBPR/AcDiv/metagenomes/R3R4/inStrain/$scaffolds.stb

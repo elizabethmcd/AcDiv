@@ -12,4 +12,4 @@ output = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/outs/$(Cluster)_$(Process)_inStrain
 error = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/errs/$(Cluster)_$(Process)_inStrain.err
 log = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/logs/$(Cluster)_$(Process)_inStrain.log
 
-queue mapping,genome,reactor,scaffolds from metadata/R3R4-inStrain-queue.txt
+queue mapping,genome,reactor,scaffolds from metadata/R3R4_UW1_UW3_inStrain_queues.txt
