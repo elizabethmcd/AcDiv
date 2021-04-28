@@ -1,0 +1,15 @@
+##############################
+# Danish WWTPs inStrain quick profile Queues
+##############################
+
+executable = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/executables/Danish-WWTPs-quick-profile.sh
+
+request_cpus = 6
+request_memory = 150GB
+arguments = $(sam)
+
+output = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/outs/$(Cluster)_$(Process)_quick_profile_WWTPs.out
+error = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/errs/$(Cluster)_$(Process)_quick_profile_WWTPs.err
+log = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/logs/$(Cluster)_$(Process)_quick_profile_WWTPs.log
+
+queue sam from metadata/Danish-WWTPs-sorted-bams.txt
