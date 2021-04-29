@@ -1,0 +1,15 @@
+##############################
+# POB inStrain queues
+##############################
+
+executable = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/executables/POB-inStrain-queue.sh
+
+request_cpus = 6
+request_memory = 150GB
+arguments = $(mapping) $(genome) $(code)
+
+output = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/outs/$(Cluster)_$(Process)_inStrain_POB.out
+error = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/errs/$(Cluster)_$(Process)_inStrain_POB.err
+log = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/logs/$(Cluster)_$(Process)_inStrain_POB.log
+
+queue mapping,genome,code from metadata/POB-inStrain-queues.txt
