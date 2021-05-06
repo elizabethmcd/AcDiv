@@ -1,63 +1,63 @@
-﻿Genome_name,Bioproject,name,code,completion,contamination,size_bp,contigs,clade,Reference
-AalE_18-Q3-R2-46_BAT3C.211,PRJNA629478,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Dechloromonas;s__,AalE_18-Q3-R2-46_BAT3C.211,90.84,4.74,3578532,15,NA,Singleton et al. 2021 Nature Comms
-Aved_18-Q3-R54-62_BAT3C.309,PRJNA629478,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Zoogloea;s__,Aved_18-Q3-R54-62_BAT3C.309,98.96,1.3,4987483,10,NA,Singleton et al. 2021 Nature Comms
-Aved_18-Q3-R54-62_BATAC.560,PRJNA629478,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Burkholderiaceae;g__Ottowia;s__,Aved_18-Q3-R54-62_BATAC.560,97.76,1.47,4006449,5,NA,Singleton et al. 2021 Nature Comms
-Aved_18-Q3-R54-62_MAXAC.403,PRJNA629478,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__;s__,Aved_18-Q3-R54-62_MAXAC.403,96.18,0.49,4117193,22,NA,Singleton et al. 2021 Nature Comms
-Bjer_18-Q3-R1-45_MAXAC.014,PRJNA629478,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Sulfuritalea;s__,Bjer_18-Q3-R1-45_MAXAC.014,94.79,4.11,3701172,48,NA,Singleton et al. 2021 Nature Comms
-coassembly-bin.169,PRJNA704939,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Thauera;s__,THAU1,98.65,1.41,4111698,56,NA,McDaniel et al. 2021
-Delftensis,NA,Candidatus Accumulibacter delftensis,DELFT,100,0.187,5278942,361,IC,Rubio-Rincon et al. 2019 Water Research
-Ejby_18-Q3-R6-50_BATAC.262,PRJNA629478,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Sulfuritalea;s__,Ejby_18-Q3-R6-50_BATAC.262,90.18,3.59,4924366,87,NA,Singleton et al. 2021 Nature Comms
-EsbE_18-Q3-R3-47_MAXAC.059,PRJNA629478,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Propionivibrio;s__Propionivibrio aalborgensis,EsbE_18-Q3-R3-47_MAXAC.059,93.62,2.82,3354719,56,NA,Singleton et al. 2021 Nature Comms
-EsbE_18-Q3-R3-47_MAXAC.131,PRJNA629478,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Propionivibrio;s__,EsbE_18-Q3-R3-47_MAXAC.131,97.31,1.26,3458321,17,NA,Singleton et al. 2021 Nature Comms
-EsbW_18-Q3-R4-48_BAT3C.207,PRJNA629478,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Burkholderiaceae;g__Rubrivivax;s__,EsbW_18-Q3-R4-48_BAT3C.207,97.67,1.25,5531576,16,NA,Singleton et al. 2021 Nature Comms
-EsbW_18-Q3-R4-48_BAT3C.275,PRJNA629478,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Dechloromonas;s__,EsbW_18-Q3-R4-48_BAT3C.275,97.88,0.14,4174266,6,NA,Singleton et al. 2021 Nature Comms
-EsbW_18-Q3-R4-48_BATAC.285,PRJNA629478,Candidatus Accumulibacter,EsbW_18-Q3-R4-48_BATAC.285,96.67,3.39,5402764,40,IID,Singleton et al. 2021 Nature Comms
-EsbW_18-Q3-R4-48_BATAC.463,PRJNA629478,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Dechloromonas;s__,EsbW_18-Q3-R4-48_BATAC.463,96.58,2.24,4450621,54,NA,Singleton et al. 2021 Nature Comms
-EsbW_18-Q3-R4-48_MAXAC.006_sub,PRJNA629478,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Burkholderiaceae;g__Vitreoscilla;s__,EsbW_18-Q3-R4-48_MAXAC.006_sub,98.68,0.7,4958022,25,NA,Singleton et al. 2021 Nature Comms
-EsbW_18-Q3-R4-48_MAXAC.044,PRJNA629478,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Propionivibrio;s__,EsbW_18-Q3-R4-48_MAXAC.044,94,2.35,4421984,67,NA,Singleton et al. 2021 Nature Comms
-Fred_18-Q3-R57-64_BAT3C.720,PRJNA629478,Candidatus Accumulibacter,Fred_18-Q3-R57-64_BAT3C.720,93.81,0.98,5041483,13,IIG,Singleton et al. 2021 Nature Comms
-Fred_18-Q3-R57-64_MAXAC.027,PRJNA629478,Candidatus Accumulibacter,Fred_18-Q3-R57-64_MAXAC.027,97.67,4,5655074,56,IIB,Singleton et al. 2021 Nature Comms
-GCA_000024165.1,PRJNA29435,Candidatus Accumulibacter phosphatis UW1,UW1,99.84,0.24,5306133,4,IIA,Garcia-Martin et al. 2006 Nat. Biotech.
-GCA_000584955.2,PRJNA231877,Candidatus Accumulibacter sp SK-01,SK-01,93.73,1.19,4561076,779,IIC,Skennerton et al. 2015 Env. Micro
-GCA_000584975.2,PRJNA236434,Candidatus Accumulibacter sp SK-02,SK-02,97.62,1.59,4359420,165,IIC,Skennerton et al. 2015 Env. Micro
-GCA_000585015.1,PRJNA236436,Candidatus Accumulibacter sp SK-12,SK-12,92.6,0.05,4412715,331,IIF,Skennerton et al. 2015 Env. Micro
-GCA_000585055.1,PRJNA236438,Candidatus Accumulibacter sp BA-92,BA-92,93.33,1.49,4947936,583,IB,Skennerton et al. 2015 Env. Micro
-GCA_000585075.1,PRJNA236439,Candidatus Accumulibacter sp BA-93,BA-93,100,0.03,4626262,168,IA,Skennerton et al. 2015 Env. Micro
-GCA_000987395.1,PRJNA245054,Candidatus Accumulibacter phosphatis HKU2,HKU2,92.29,2.86,4262673,370,IIC,Mao et al. 2017 Env. Sci. Tech.
-GCA_000987445.1,PRJNA238420,Candidatus Accumulibacter phosphatis HKU1,HKU1,90.06,2.54,3625256,824,IB,Mao et al. 2017 Env. Sci. Tech.
-GCA_001897745.1,PRJNA279279,Candidatus Accumulibacter sp 66-26,66-26,99.76,0.03,4385439,51,unknown,Kantor et al. 2015 Env. Micro
-GCA_003332265.1,PRJNA322674,Candidatus Accumulibacter phosphatis UW-LDO,UW-LDO,95.24,0.7,4701482,187,IC,Camejo et al. 2019 mSystems
-GCA_005524045.1,PRJNA532338,Candidatus Accumulibacter sp SCELSE-1,SCELSE-1,95.24,0.6,4456818,253,IIF,Qiu et al. 2020 Env. Sci. Tech.
-GCA_005889575.1,PRJNA534415,Candidatus Accumulibacter phosphatis Bin19,BIN19,98.51,1.94,4887416,247,IIC,Kotlyarov et al. 2020 Microbiology
-GCA_009467855.1,PRJNA386410,Candidatus Accumulibacter phosphatis CANDO_1,CANDO_1,91.43,0.28,3587117,437,IA,Gao et al. 2019 Water Res.
-GCA_012939955.1,PRJNA528323,Candidatus Accumulibacter phosphatis SBR_S,SBR_S,97.33,0.5,5044133,149,IC,Cornell
-GCA_012940005.1,PRJNA528323,Candidatus Accumulibacter phosphatis SBR_L,SBR_L,96.85,0.98,5024437,167,IIC,Cornell
-GCA_013347225.1,PRJNA611629,Candidatus Accumulibacter phosphatis SSB1,SSB1,99.05,0.03,5039009,1,IIF,SCELSE
-GCA_013414765.1,PRJNA509764,Candidatus Accumulibacter phosphatis SSA1,SSA1,99.05,1.11,5169514,3,IIC,Arumugam et al. 2019 Microbiome
-GCA_013823155.1,PRJNA323575,Candidatus Accumulibacter phosphatis DS2_011,DS2_011,98.37,0,3761345,61,unknown,Zhang et al. 2017 Frontiers Micro.
-GCA_900089955.1,PRJEB13978,Candidatus Accumulibacter aalborgensis,AALB,99.52,0.06,4707069,181,unknown,Albertsen et al. 2016 Frontiers Micro.
-Hade_18-Q3-R52-61_BATAC.726,PRJNA629478,Candidatus Accumulibacter,Hade_18-Q3-R52-61_BATAC.726,90.17,2.33,4391132,84,IIB,Singleton et al. 2021 Nature Comms
-Hirt_18-Q3-R61-65_MAXAC.059,PRJNA629478,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Sulfuritalea;s__,Hirt_18-Q3-R61-65_MAXAC.059,93.96,3.18,4377445,56,NA,Singleton et al. 2021 Nature Comms
-Hjor_18-Q3-R7-51_MAXAC.006,PRJNA629478,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Sulfuritalea;s__,Hjor_18-Q3-R7-51_MAXAC.006,96.78,1.37,4498252,19,NA,Singleton et al. 2021 Nature Comms
-Lyne_18-Q3-R50-59_BAT3C.300,PRJNA629478,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__;s__,Lyne_18-Q3-R50-59_BAT3C.300,96.21,0.05,3789853,2,NA,Singleton et al. 2021 Nature Comms
-OdNE_18-Q3-R46-58_BAT3C.305,PRJNA629478,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Dechloromonas;s__,OdNE_18-Q3-R46-58_BAT3C.305,96.89,4.61,4076926,29,NA,Singleton et al. 2021 Nature Comms
-OdNE_18-Q3-R46-58_BAT3C.415,PRJNA629478,Candidatus Accumulibacter,OdNE_18-Q3-R46-58_BAT3C.415,95.26,0.98,4325360,62,IIB,Singleton et al. 2021 Nature Comms
-OdNW_18-Q3-R42-56_BAT3C.215,PRJNA629478,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__;s__,OdNW_18-Q3-R42-56_BAT3C.215,95.87,2.42,3534522,3,NA,Singleton et al. 2021 Nature Comms
-OdNW_18-Q3-R42-56_MAXAC.118,PRJNA629478,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__;s__,OdNW_18-Q3-R42-56_MAXAC.118,95.85,3.32,3541950,13,NA,Singleton et al. 2021 Nature Comms
-POS2015-07-16-bin.46,PRJNA704939,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Dechloromonas;s__,DECH1,91.47,8.1,3690745,279,NA,McDaniel et al. 2021
-POS2015-07-16-bin.49,PRJNA704939,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Sulfuritalea;s__,SULF1,98.26,1.09,4409354,88,NA,McDaniel et al. 2021
-POS2015-08-06-bin.9,PRJNA704939,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Zoogloea;s__,ZOOG2,95.16,1.8,4522276,165,NA,McDaniel et al. 2021
-Ribe_18-Q3-R11-54_MAXAC.030,PRJNA629478,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Dechloromonas;s__Dechloromonas sp002396525,Ribe_18-Q3-R11-54_MAXAC.030,99.21,0.83,4726453,7,NA,Singleton et al. 2021 Nature Comms
-Skiv_18-Q3-R9-52_MAXAC.078_sub,PRJNA629478,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Dechloromonas;s__,Skiv_18-Q3-R9-52_MAXAC.078_sub,94.72,2.11,4220355,18,NA,Singleton et al. 2021 Nature Comms
-UW10-POB,PRJNA704939,Candidatus Accumulibacter UW10-POB,UW10-POB,100,0,4395533,88,IIB,McDaniel et al. 2021
-UW11-POB,PRJNA704939,Candidatus Accumulibacter UW11-POB,UW11-POB,100,0,4627111,144,IIC,McDaniel et al. 2021
-UW12-POB,PRJNA704939,Candidatus Accumulibacter UW12-POB,UW12-POB,98.1,0.74,4564354,91,IID,McDaniel et al. 2021
-UW13-POB,PRJNA704939,Candidatus Accumulibacter UW13-POB,UW13-POB,97.14,4.39,5447020,245,IIF,McDaniel et al. 2021
-UW3,IMG,Candidatus Accumulibacter UW3,UW3,99.94,0.03,4329894,110,IA,Flowers et al. 2013 ISMEJ
-UW4,PRJNA668760,Candidatus Accumulibacter UW4,UW4,92.9,3.37,4288117,358,IA,McDaniel and Moya et al. 2021
-UW5,PRJNA668760,Candidatus Accumulibacter UW5,UW5,98.99,5.24,4882959,68,IIA,McDaniel and Moya et al. 2021
-UW6,PRJNA668760,Candidatus Accumulibacter UW6,UW6,98.57,2.46,5179050,1,IIC,McDaniel and Moya et al. 2021
-UW7,PRJNA668760,Candidatus Accumulibacter UW7,UW7,98.97,3.04,4870756,102,IIF,McDaniel and Moya et al. 2021
-UW8-POB,PRJNA704939,Candidatus Accumulibacter UW8-POB,UW8-POB,100,0,4262696,49,IA,McDaniel et al. 2021
-UW9-POB,PRJNA704939,Candidatus Accumulibacter UW9-POB,UW9-POB,100,0,4931494,126,IIA,McDaniel et al. 2021
-Vibo_18-Q3-R45-57_MAXAC.072,PRJNA629478,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Zoogloea;s__,Vibo_18-Q3-R45-57_MAXAC.072,92,1.45,4052277,66,NA,Singleton et al. 2021 Nature Comms
+﻿genome,Bioproject,group_name,full_name,code,completion,contamination,size_bp,contigs,clade,Reference
+Fred_18-Q3-R57-64_MAXAC.027,PRJNA629478,Accumulibacter,Candidatus Accumulibacter,Fred_18-Q3-R57-64_MAXAC.027,97.67,4,5655074,56,IIB,Singleton et al. 2021 Nature Comms
+Hade_18-Q3-R52-61_BATAC.726,PRJNA629478,Accumulibacter,Candidatus Accumulibacter,Hade_18-Q3-R52-61_BATAC.726,90.17,2.33,4391132,84,IIB,Singleton et al. 2021 Nature Comms
+OdNE_18-Q3-R46-58_BAT3C.415,PRJNA629478,Accumulibacter,Candidatus Accumulibacter,OdNE_18-Q3-R46-58_BAT3C.415,95.26,0.98,4325360,62,IIB,Singleton et al. 2021 Nature Comms
+EsbW_18-Q3-R4-48_BATAC.285,PRJNA629478,Accumulibacter,Candidatus Accumulibacter,EsbW_18-Q3-R4-48_BATAC.285,96.67,3.39,5402764,40,IID,Singleton et al. 2021 Nature Comms
+Fred_18-Q3-R57-64_BAT3C.720,PRJNA629478,Accumulibacter,Candidatus Accumulibacter,Fred_18-Q3-R57-64_BAT3C.720,93.81,0.98,5041483,13,IIG,Singleton et al. 2021 Nature Comms
+GCA_900089955.1,PRJEB13978,Accumulibacter,Candidatus Accumulibacter aalborgensis,AALB,99.52,0.06,4707069,181,unknown,Albertsen et al. 2016 Frontiers Micro.
+Delftensis,NA,Accumulibacter,Candidatus Accumulibacter delftensis,DELFT,100,0.187,5278942,361,IC,Rubio-Rincon et al. 2019 Water Research
+GCA_005889575.1,PRJNA534415,Accumulibacter,Candidatus Accumulibacter phosphatis Bin19,BIN19,98.51,1.94,4887416,247,IIC,Kotlyarov et al. 2020 Microbiology
+GCA_009467855.1,PRJNA386410,Accumulibacter,Candidatus Accumulibacter phosphatis CANDO_1,CANDO_1,91.43,0.28,3587117,437,IA,Gao et al. 2019 Water Res.
+GCA_013823155.1,PRJNA323575,,Candidatus Accumulibacter phosphatis DS2_011,DS2_011,98.37,0,3761345,61,unknown,Zhang et al. 2017 Frontiers Micro.
+GCA_000987445.1,PRJNA238420,Accumulibacter,Candidatus Accumulibacter phosphatis HKU1,HKU1,90.06,2.54,3625256,824,IB,Mao et al. 2017 Env. Sci. Tech.
+GCA_000987395.1,PRJNA245054,Accumulibacter,Candidatus Accumulibacter phosphatis HKU2,HKU2,92.29,2.86,4262673,370,IIC,Mao et al. 2017 Env. Sci. Tech.
+GCA_012940005.1,PRJNA528323,Accumulibacter,Candidatus Accumulibacter phosphatis SBR_L,SBR_L,96.85,0.98,5024437,167,IIC,Cornell
+GCA_012939955.1,PRJNA528323,Accumulibacter,Candidatus Accumulibacter phosphatis SBR_S,SBR_S,97.33,0.5,5044133,149,IC,Cornell
+GCA_013414765.1,PRJNA509764,Accumulibacter,Candidatus Accumulibacter phosphatis SSA1,SSA1,99.05,1.11,5169514,3,IIC,Arumugam et al. 2019 Microbiome
+GCA_013347225.1,PRJNA611629,Accumulibacter,Candidatus Accumulibacter phosphatis SSB1,SSB1,99.05,0.03,5039009,1,IIF,SCELSE
+GCA_003332265.1,PRJNA322674,Accumulibacter,Candidatus Accumulibacter phosphatis UW-LDO,UW-LDO,95.24,0.7,4701482,187,IC,Camejo et al. 2019 mSystems
+GCA_000024165.1,PRJNA29435,Accumulibacter,Candidatus Accumulibacter phosphatis UW1,UW1,99.84,0.24,5306133,4,IIA,Garcia-Martin et al. 2006 Nat. Biotech.
+GCA_001897745.1,PRJNA279279,,Candidatus Accumulibacter sp 66-26,66-26,99.76,0.03,4385439,51,unknown,Kantor et al. 2015 Env. Micro
+GCA_000585055.1,PRJNA236438,Accumulibacter,Candidatus Accumulibacter sp BA-92,BA-92,93.33,1.49,4947936,583,IB,Skennerton et al. 2015 Env. Micro
+GCA_000585075.1,PRJNA236439,Accumulibacter,Candidatus Accumulibacter sp BA-93,BA-93,100,0.03,4626262,168,IA,Skennerton et al. 2015 Env. Micro
+GCA_005524045.1,PRJNA532338,Accumulibacter,Candidatus Accumulibacter sp SCELSE-1,SCELSE-1,95.24,0.6,4456818,253,IIF,Qiu et al. 2020 Env. Sci. Tech.
+GCA_000584955.2,PRJNA231877,Accumulibacter,Candidatus Accumulibacter sp SK-01,SK-01,93.73,1.19,4561076,779,IIC,Skennerton et al. 2015 Env. Micro
+GCA_000584975.2,PRJNA236434,Accumulibacter,Candidatus Accumulibacter sp SK-02,SK-02,97.62,1.59,4359420,165,IIC,Skennerton et al. 2015 Env. Micro
+GCA_000585015.1,PRJNA236436,Accumulibacter,Candidatus Accumulibacter sp SK-12,SK-12,92.6,0.05,4412715,331,IIF,Skennerton et al. 2015 Env. Micro
+UW10-POB,PRJNA704939,Accumulibacter,Candidatus Accumulibacter UW10-POB,UW10-POB,100,0,4395533,88,IIB,McDaniel et al. 2021
+UW11-POB,PRJNA704939,Accumulibacter,Candidatus Accumulibacter UW11-POB,UW11-POB,100,0,4627111,144,IIC,McDaniel et al. 2021
+UW12-POB,PRJNA704939,Accumulibacter,Candidatus Accumulibacter UW12-POB,UW12-POB,98.1,0.74,4564354,91,IID,McDaniel et al. 2021
+UW13-POB,PRJNA704939,Accumulibacter,Candidatus Accumulibacter UW13-POB,UW13-POB,97.14,4.39,5447020,245,IIF,McDaniel et al. 2021
+UW3,IMG,Accumulibacter,Candidatus Accumulibacter UW3,UW3,99.94,0.03,4329894,110,IA,Flowers et al. 2013 ISMEJ
+UW4,PRJNA668760,Accumulibacter,Candidatus Accumulibacter UW4,UW4,92.9,3.37,4288117,358,IA,McDaniel and Moya et al. 2021
+UW5,PRJNA668760,Accumulibacter,Candidatus Accumulibacter UW5,UW5,98.99,5.24,4882959,68,IIA,McDaniel and Moya et al. 2021
+UW6,PRJNA668760,Accumulibacter,Candidatus Accumulibacter UW6,UW6,98.57,2.46,5179050,1,IIC,McDaniel and Moya et al. 2021
+UW7,PRJNA668760,Accumulibacter,Candidatus Accumulibacter UW7,UW7,98.97,3.04,4870756,102,IIF,McDaniel and Moya et al. 2021
+UW8-POB,PRJNA704939,Accumulibacter,Candidatus Accumulibacter UW8-POB,UW8-POB,100,0,4262696,49,IA,McDaniel et al. 2021
+UW9-POB,PRJNA704939,Accumulibacter,Candidatus Accumulibacter UW9-POB,UW9-POB,100,0,4931494,126,IIA,McDaniel et al. 2021
+Aved_18-Q3-R54-62_BATAC.560,PRJNA629478,Burkholderiaceae,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Burkholderiaceae;g__Ottowia;s__,Aved_18-Q3-R54-62_BATAC.560,97.76,1.47,4006449,5,NA,Singleton et al. 2021 Nature Comms
+EsbW_18-Q3-R4-48_BAT3C.207,PRJNA629478,Burkholderiaceae,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Burkholderiaceae;g__Rubrivivax;s__,EsbW_18-Q3-R4-48_BAT3C.207,97.67,1.25,5531576,16,NA,Singleton et al. 2021 Nature Comms
+EsbW_18-Q3-R4-48_MAXAC.006_sub,PRJNA629478,Burkholderiaceae,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Burkholderiaceae;g__Vitreoscilla;s__,EsbW_18-Q3-R4-48_MAXAC.006_sub,98.68,0.7,4958022,25,NA,Singleton et al. 2021 Nature Comms
+Aved_18-Q3-R54-62_MAXAC.403,PRJNA629478,Rhodocyclaceae,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__;s__,Aved_18-Q3-R54-62_MAXAC.403,96.18,0.49,4117193,22,NA,Singleton et al. 2021 Nature Comms
+Lyne_18-Q3-R50-59_BAT3C.300,PRJNA629478,Rhodocyclaceae,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__;s__,Lyne_18-Q3-R50-59_BAT3C.300,96.21,0.05,3789853,2,NA,Singleton et al. 2021 Nature Comms
+OdNW_18-Q3-R42-56_BAT3C.215,PRJNA629478,Rhodocyclaceae,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__;s__,OdNW_18-Q3-R42-56_BAT3C.215,95.87,2.42,3534522,3,NA,Singleton et al. 2021 Nature Comms
+OdNW_18-Q3-R42-56_MAXAC.118,PRJNA629478,Rhodocyclaceae,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__;s__,OdNW_18-Q3-R42-56_MAXAC.118,95.85,3.32,3541950,13,NA,Singleton et al. 2021 Nature Comms
+AalE_18-Q3-R2-46_BAT3C.211,PRJNA629478,Dechloromonas,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Dechloromonas;s__,AalE_18-Q3-R2-46_BAT3C.211,90.84,4.74,3578532,15,NA,Singleton et al. 2021 Nature Comms
+EsbW_18-Q3-R4-48_BAT3C.275,PRJNA629478,Dechloromonas,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Dechloromonas;s__,EsbW_18-Q3-R4-48_BAT3C.275,97.88,0.14,4174266,6,NA,Singleton et al. 2021 Nature Comms
+EsbW_18-Q3-R4-48_BATAC.463,PRJNA629478,Dechloromonas,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Dechloromonas;s__,EsbW_18-Q3-R4-48_BATAC.463,96.58,2.24,4450621,54,NA,Singleton et al. 2021 Nature Comms
+OdNE_18-Q3-R46-58_BAT3C.305,PRJNA629478,Dechloromonas,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Dechloromonas;s__,OdNE_18-Q3-R46-58_BAT3C.305,96.89,4.61,4076926,29,NA,Singleton et al. 2021 Nature Comms
+POS2015-07-16-bin.46,PRJNA704939,Dechloromonas,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Dechloromonas;s__,DECH1,91.47,8.1,3690745,279,NA,McDaniel et al. 2021
+Skiv_18-Q3-R9-52_MAXAC.078_sub,PRJNA629478,Dechloromonas,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Dechloromonas;s__,Skiv_18-Q3-R9-52_MAXAC.078_sub,94.72,2.11,4220355,18,NA,Singleton et al. 2021 Nature Comms
+Ribe_18-Q3-R11-54_MAXAC.030,PRJNA629478,Dechloromonas,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Dechloromonas;s__Dechloromonas sp002396525,Ribe_18-Q3-R11-54_MAXAC.030,99.21,0.83,4726453,7,NA,Singleton et al. 2021 Nature Comms
+EsbE_18-Q3-R3-47_MAXAC.131,PRJNA629478,Propionivibrio,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Propionivibrio;s__,EsbE_18-Q3-R3-47_MAXAC.131,97.31,1.26,3458321,17,NA,Singleton et al. 2021 Nature Comms
+EsbW_18-Q3-R4-48_MAXAC.044,PRJNA629478,Propionivibrio,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Propionivibrio;s__,EsbW_18-Q3-R4-48_MAXAC.044,94,2.35,4421984,67,NA,Singleton et al. 2021 Nature Comms
+EsbE_18-Q3-R3-47_MAXAC.059,PRJNA629478,Propionivibrio,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Propionivibrio;s__Propionivibrio aalborgensis,EsbE_18-Q3-R3-47_MAXAC.059,93.62,2.82,3354719,56,NA,Singleton et al. 2021 Nature Comms
+Bjer_18-Q3-R1-45_MAXAC.014,PRJNA629478,Sulfuritalea,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Sulfuritalea;s__,Bjer_18-Q3-R1-45_MAXAC.014,94.79,4.11,3701172,48,NA,Singleton et al. 2021 Nature Comms
+Ejby_18-Q3-R6-50_BATAC.262,PRJNA629478,Sulfuritalea,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Sulfuritalea;s__,Ejby_18-Q3-R6-50_BATAC.262,90.18,3.59,4924366,87,NA,Singleton et al. 2021 Nature Comms
+Hirt_18-Q3-R61-65_MAXAC.059,PRJNA629478,Sulfuritalea,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Sulfuritalea;s__,Hirt_18-Q3-R61-65_MAXAC.059,93.96,3.18,4377445,56,NA,Singleton et al. 2021 Nature Comms
+Hjor_18-Q3-R7-51_MAXAC.006,PRJNA629478,Sulfuritalea,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Sulfuritalea;s__,Hjor_18-Q3-R7-51_MAXAC.006,96.78,1.37,4498252,19,NA,Singleton et al. 2021 Nature Comms
+POS2015-07-16-bin.49,PRJNA704939,Sulfuritalea,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Sulfuritalea;s__,SULF1,98.26,1.09,4409354,88,NA,McDaniel et al. 2021
+coassembly-bin.169,PRJNA704939,Thauera,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Thauera;s__,THAU1,98.65,1.41,4111698,56,NA,McDaniel et al. 2021
+Aved_18-Q3-R54-62_BAT3C.309,PRJNA629478,Zoogloea,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Zoogloea;s__,Aved_18-Q3-R54-62_BAT3C.309,98.96,1.3,4987483,10,NA,Singleton et al. 2021 Nature Comms
+POS2015-08-06-bin.9,PRJNA704939,Zoogloea,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Zoogloea;s__,ZOOG2,95.16,1.8,4522276,165,NA,McDaniel et al. 2021
+Vibo_18-Q3-R45-57_MAXAC.072,PRJNA629478,Zoogloea,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Rhodocyclaceae;g__Zoogloea;s__,Vibo_18-Q3-R45-57_MAXAC.072,92,1.45,4052277,66,NA,Singleton et al. 2021 Nature Comms
