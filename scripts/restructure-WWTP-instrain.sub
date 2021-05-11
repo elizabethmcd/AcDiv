@@ -1,0 +1,15 @@
+##############################
+# Danish WWTPs inStrain restructure filtered results
+##############################
+
+executable = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/executables/restructure-WWTP-inStrain-results.sh
+
+request_cpus = 4
+request_memory = 10GB
+arguments = $(genome) $(sample) $(code)
+
+output = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/outs/$(Cluster)_$(Process)_restructure_WWTPs.out
+error = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/errs/$(Cluster)_$(Process)_restructure_WWTPs.err
+log = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/logs/$(Cluster)_$(Process)_restructure_WWTPs.log
+
+queue genome,sample,code from metadata/filtered-WWTP-instrain-results.txt
