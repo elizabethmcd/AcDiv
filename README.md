@@ -1,3 +1,3 @@
-# Diversity of the 'Rhodocyclaceae' lineage 
+# Diversity of the _Rhodocyclaceae_ lineage 
 
 This project reevaluated the population structure and microdiversity of the polyphosphate-accumulating organism (PAO) 'Candidatus Accumulibacter phosphatis' and related Rhodocyclaceae lineages using genome-resolved metagenomics. Genomes were collected from publicly available datasets, lab-scale bioreactors ran at the University of Wisconsin - Madison, and a Danish full-scale WWTP. 

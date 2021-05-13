@@ -18,6 +18,14 @@ sulf_nucl_div <- sulf_snvs %>%
   select(sample, gene, nucl_diversity) %>% 
   pivot_wider(names_from = sample, values_from = nucl_diversity) # get nucleotide diversity for all genes, change sample name
 
+sulf_nucl_div$index <- seq.int(nrow(sulf_nucl_div))
+sulf_nucl_div_genome <- sulf_nucl_div %>% 
+  select(-gene) %>% 
+  drop_na() %>% 
+  pivot_longer(!index, names_to = "sample", values_to = "nucleotide_diversity")
+
+sulf_nucl_div_genome %>% ggplot(aes(x=index, y=nucleotide_diversity)) + geom_point(color="navy") + facet_wrap(~ sample)
+
 ####################################  
 # Accumulibacter with high coverage
 #################################### 
@@ -36,4 +44,10 @@ acc_nucl_div <- acc_snvs %>%
   select(sample, gene, nucl_diversity) %>% 
   pivot_wider(names_from = sample, values_from = nucl_diversity)
 
+acc_nucl_div$index <- seq.int(nrow(acc_nucl_div))
+acc_nucl_div_genome <- acc_nucl_div %>% 
+  select(-gene) %>% 
+  drop_na() %>% 
+  pivot_longer(!index, names_to = "sample", values_to = "nucleotide_diversity")
 
+acc_nucl_div_genome %>% ggplot(aes(x=index, y=nucleotide_diversity)) + geom_point(color="navy") + facet_wrap(~ sample)
