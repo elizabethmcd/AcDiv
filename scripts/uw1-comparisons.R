@@ -6,7 +6,6 @@ library(gridGraphics)
 # UW1 Accumulibacter R1R2 2005 vs R3R4 2015
 #################################### 
 
-uw1_path <- "results/SNVs/R1R2_vs_R3R4/"
 files <- dir(uw1_path, pattern="*_gene_info.tsv")
 
 uw1_snvs <- data_frame(filename = files) %>% 
@@ -79,7 +78,7 @@ uw1_r1r2_snv_count_comp <- uw1_r1r2_snv_count %>%
   pivot_longer(!index, names_to = "sample", values_to = "SNVs")
 
 high_snvs_end <- uw1_r1r2_snv_count_comp %>% 
-  filter(SNVs > 30 & index > 4000) %>% 
+  filter(SNVs > 30) %>% 
   pull(index)
 
 high_snv_loci <- uw1_r1r2_snv_count %>% filter(index %in% high_snvs_end)
@@ -113,8 +112,8 @@ high_2015_loci <- uw1_snv_count %>% filter(index %in% high_2015_snvs)
 high_2015_loci$locus_tag <- gsub("gnl|X|", "", high_2015_loci$gene, fixed=TRUE)
 high_2015_snvs_annotations <- left_join(high_2015_loci, uw1_annotations)
 
-high_snvs_annotations <- left_join(high_snv_loci, uw1_annotations) %>% 
-  select(locus_tag, R1R2_2005, R1R2_2)
+high_snv_loci$locus_tag <- gsub("gnl|X|", "", high_snv_loci$gene, fixed=TRUE)
+high_snvs_annotations <- left_join(high_snv_loci, uw1_annotations)
 
 ####################################  
 # UW3 Accumulibacter R1R2 2005 vs 2013
@@ -212,3 +211,5 @@ r1r2_2008_title <- ggdraw() + draw_label ("Accumulibacter UW1 IIA and UW3 IA SNV
 
 r1r2_2008_grid_pretty <- plot_grid(r1r2_2008_title, r1r2_2008_grid, ncol=1, rel_heights=c(0.1,1))
 r1r2_2008_grid_pretty
+
+
