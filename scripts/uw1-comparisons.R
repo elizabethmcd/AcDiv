@@ -3,7 +3,7 @@ library(cowplot)
 library(gridGraphics)
 
 ####################################  
-# UW1 Accumulibacter R1R2 vs R3R4
+# UW1 Accumulibacter R1R2 2005 vs R3R4 2015
 #################################### 
 
 uw1_path <- "results/SNVs/R1R2_vs_R3R4/"
@@ -86,9 +86,9 @@ high_snv_loci <- uw1_r1r2_snv_count %>% filter(index %in% high_snvs_end)
 
 # plots
 # 2005 vs 2013 nucleotide diversity
-uw1_2005_vs_2013_nucl_div <- uw1_r1r2_nucl_div_compare %>% ggplot(aes(x=index, y=nucleotide_diversity, color=sample)) + geom_point() + labs(title = "2005 vs 2013 Nucleotide Diversity")
+uw1_2005_vs_2013_nucl_div <- uw1_r1r2_nucl_div_compare %>% ggplot(aes(x=index, y=nucleotide_diversity, color=sample)) + geom_point() + labs(title = "UW1 IIA 2005 vs 2013 π")
 # 2005 vs 2013 SNV counts
-uw1_2005_vs_2013_snvs <- uw1_r1r2_snv_count_comp %>% ggplot(aes(x=index, y=SNVs, color=sample)) + geom_point() + labs(title="2005 vs 2013 SNVs")
+uw1_2005_vs_2013_snvs <- uw1_r1r2_snv_count_comp %>% ggplot(aes(x=index, y=SNVs, color=sample)) + geom_point() + labs(title="UW1 IIA 2005 vs 2013 SNVs")
 
 # arrange in grid to compare 2005 vs 2013 and 2005 vs 2015 (populations over time vs somewhat space in different reactor enrichments)
 
@@ -115,3 +115,100 @@ high_2015_snvs_annotations <- left_join(high_2015_loci, uw1_annotations)
 
 high_snvs_annotations <- left_join(high_snv_loci, uw1_annotations) %>% 
   select(locus_tag, R1R2_2005, R1R2_2)
+
+####################################  
+# UW3 Accumulibacter R1R2 2005 vs 2013
+# Sufficient coverage in both samples to compare over time
+#################################### 
+
+uw3_path <- "results/SNVs/R1R2_vs_R3R4/"
+uw3_files <- dir(uw2_path, pattern="*_UW3_gene_info.tsv")
+
+uw3_snvs <- data_frame(filename = uw3_files) %>% 
+  mutate(file_contents = map(filename, ~ read_tsv(file.path(uw3_path, .)))
+         ) %>% 
+  unnest()
+
+uw3_nucl_div <- uw3_snvs %>% 
+  select(filename, gene, nucl_diversity) %>% 
+  mutate(sample = gsub("_UW3.*", "", filename)) %>% 
+  select(sample, gene, nucl_diversity) %>% 
+  pivot_wider(names_from = sample, values_from = nucl_diversity)
+
+uw3_snv_count <- uw3_snvs %>% 
+  select(filename, gene, SNV_count) %>% 
+  mutate(sample = gsub("_UW3.*", "", filename)) %>% 
+  select(sample, gene, SNV_count) %>% 
+  pivot_wider(names_from = sample, values_from = SNV_count)
+
+uw3_snv_count$index <- seq.int(nrow(uw3_snv_count))
+
+uw3_snvs_filtered <- uw3_snv_count %>% 
+  select(index, R1R2_2005, R1R2_2013) %>% 
+  drop_na() %>% 
+  pivot_longer(!index, names_to = "sample", values_to="SNVs")
+
+uw3_nucl_div$index <- seq.int(nrow(uw3_nucl_div))
+uw3_div_comp <- uw3_nucl_div %>% 
+  select(index, R1R2_2005, R1R2_2013) %>% 
+  drop_na() %>% 
+  pivot_longer(!index, names_to = "sample", values_to = "nucleotide_diversity")
+
+# plots
+# 2005 vs 2013 UW3 populations snvs
+uw3_snvs_plot <- uw3_snvs_filtered %>% ggplot(aes(x=index, y=SNVs, color=sample)) + geom_point() + labs(title = "UW3 IA 2005 vs 2013 SNVs")
+uw3_snvs_plot
+# 2005 vs 2015 populations nucl diversity
+uw3_nucl_plot <- uw3_div_comp %>% ggplot(aes(x=index, y=nucleotide_diversity, color=sample)) + geom_point() + labs(title = "UW3 IA 2005 vs 2013 π")
+uw3_nucl_plot
+
+# grid of UW1 and UW3 SNVS and π over same timeframe
+
+r1r2_grid <- plot_grid(uw1_2005_vs_2013_snvs + theme(legend.position="none"), uw1_2005_vs_2013_nucl_div + theme(legend.position="none"), uw3_snvs_plot + theme(legend.position="none"), uw3_nucl_plot + theme(legend.position="none"))
+
+r1r2_title <- ggdraw() + draw_label("Accumulibacter UW1 IIA and UW3 IA SNVs and π in 2005 vs 2013", fontface="bold", x=0, hjust=0) + theme(plot.margin=margin(0,0,0,20))
+
+r1r2_grid_pretty <- plot_grid(r1r2_title, r1r2_grid, ncol=1, rel_heights=c(0.1,1))
+r1r2_grid_pretty
+
+ggsave(filename="figures/R1R2-UW1-UW3-2005-vs-2013-comparisons.png", r1r2_grid_pretty, width=12, height=8, units=c("in"))
+
+####################################  
+# UW1 and UW3 in 2008 time-point when both equally abundant
+#################################### 
+
+uw1_2008_snvs <- read_tsv("results/SNVs/R1R2_vs_R3R4/R1R2_2008_UW1_gene_info.tsv") %>% 
+  select(gene, SNV_count)
+uw1_2008_snvs$index <- seq.int(nrow(uw1_2008_snvs))
+uw1_2008_snv_count <- uw1_2008_snvs %>% 
+  select(index, SNV_count) %>% 
+  drop_na()
+
+uw1_2008_div <- read_tsv("results/SNVs/R1R2_vs_R3R4/R1R2_2008_UW1_gene_info.tsv") %>% 
+  select(gene, nucl_diversity)
+uw1_2008_div$index <- seq.int(nrow(uw1_2008_div))
+uw1_2008_div_count <- uw1_2008_div %>% 
+  select(index, nucl_diversity) %>% 
+  drop_na()
+
+uw3_2008_snvs <- read_tsv("results/SNVs/R1R2_vs_R3R4/R1R2_2008_UW3_gene_info.tsv") %>% 
+  select(gene, SNV_count)
+uw3_2008_snvs$index <- seq.int(nrow(uw3_2008_snvs))
+
+uw3_2008_nucl_div <- read_tsv("results/SNVs/R1R2_vs_R3R4/R1R2_2008_UW3_gene_info.tsv") %>% 
+  select(gene, nucl_diversity)
+uw3_2008_nucl_div$index <- seq.int(nrow(uw3_2008_nucl_div))
+
+# plots
+uw1_snv_plot <- uw1_2008_snv_count %>% ggplot(aes(x=index, y=SNV_count)) + geom_point(color="navyblue") + labs(title="UW1 SNVs")
+uw1_pi_plot <- uw1_2008_div_count %>% ggplot(aes(x=index, y=nucl_diversity)) + geom_point(color="navyblue") + labs(title="UW1 π")
+uw3_snv_plot <- uw3_2008_snvs %>% ggplot(aes(x=index, y=SNV_count)) + geom_point(color="orange") + labs(title="UW3 SNVs")
+uw3_pi_plot <- uw3_2008_nucl_div %>% ggplot(aes(x=index, y=nucl_diversity)) + geom_point(color="orange") + labs(title="UW3 π")
+
+r1r2_2008_grid <- plot_grid(uw1_snv_plot, uw1_pi_plot, uw3_snv_plot, uw3_pi_plot)
+r1r2_2008_grid
+
+r1r2_2008_title <- ggdraw() + draw_label ("Accumulibacter UW1 IIA and UW3 IA SNVs and π in 2008", fontface="bold", x=0, hjust=0) + theme(plot.margin=margin(0,0,0,20))
+
+r1r2_2008_grid_pretty <- plot_grid(r1r2_2008_title, r1r2_2008_grid, ncol=1, rel_heights=c(0.1,1))
+r1r2_2008_grid_pretty
