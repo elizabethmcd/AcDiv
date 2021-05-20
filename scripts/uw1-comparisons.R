@@ -35,11 +35,24 @@ uw1_div_comp <- uw1_nucl_div %>%
   select(index, R1R2_2005, R3R4_2015) %>% 
   pivot_longer(!index, names_to = "sample", values_to = "nucleotide_diversity")
 
+
 # plots
 # 2005 vs 2015 populations snvs
 uw1_2005_vs_2015_snvs <- uw1_snvs %>% ggplot(aes(x=index, y=SNVs, color=sample)) + geom_point() + labs(title = "2005 vs 2015 SNVs")
+
 # 2005 vs 2015 populations nucl diversity
 uw1_2005_vs_2015_nucl_div <- uw1_div_comp %>% ggplot(aes(x=index, y=nucleotide_diversity, color=sample)) + geom_point() + labs(title = "2005 vs 2015 Nucleotide Diversity")
+
+# Facet by sample instead of overlaid
+uw1_snvs_samples <- uw1_snvs %>% ggplot(aes(x=index, y=SNVs)) + geom_point(color="navyblue") + facet_wrap(~ sample) + labs(title = "UW1 IIA SNVs in R1R2 vs R3R4")  + theme_bw()
+uw1_pi_samples <- uw1_div_comp %>% ggplot(aes(x=index, y=nucleotide_diversity)) + geom_point(color="purple") + facet_wrap(~ sample) + labs(title = "UW1 IIA Gene-Specific Nucleotide Diversity π in R1R2 vs R3R4") + theme_bw()
+
+plot_grid(uw1_snvs_samples, uw1_pi_samples, labels="AUTO", ncol=1)
+uw1_grid_by_sample
+
+r1r2_grid <- plot_grid(uw1_2005_vs_2013_snvs + theme(legend.position="none"), uw1_2005_vs_2013_nucl_div + theme(legend.position="none"), uw3_snvs_plot + theme(legend.position="none"), uw3_nucl_plot + theme(legend.position="none"))
+
+r1r2_title <- ggdraw() + draw_label("Accumulibacter UW1 IIA and UW3 IA SNVs and π in 2005 vs 2013", fontface="bold", x=0, hjust=0) + theme(plot.margin=margin(0,0,0,20))
 
 ####################################  
 # UW1 Accumulibacter R1R2 2005 vs 2013 
@@ -212,4 +225,18 @@ r1r2_2008_title <- ggdraw() + draw_label ("Accumulibacter UW1 IIA and UW3 IA SNV
 r1r2_2008_grid_pretty <- plot_grid(r1r2_2008_title, r1r2_2008_grid, ncol=1, rel_heights=c(0.1,1))
 r1r2_2008_grid_pretty
 
+####################################  
+# UW1 Accumulibacter R1R2 2005 vs 2015
+# Grid of SNVs, π, and Fst between these samples for Acc IIA
+#################################### 
+
+# Facet by sample instead of overlaid
+uw1_snvs_samples <- uw1_snvs %>% ggplot(aes(x=index, y=SNVs)) + geom_point(color="navyblue") + facet_wrap(~ sample) + labs(title = "UW1 IIA SNVs in R1R2 vs R3R4")  + theme_bw()
+uw1_pi_samples <- uw1_div_comp %>% ggplot(aes(x=index, y=nucleotide_diversity)) + geom_point(color="darkorchid4") + facet_wrap(~ sample) + scale_y_continuous(limits=c(0,0.025)) + labs(title = "UW1 IIA Gene-Specific Nucleotide Diversity in R1R2 vs R3R4") + theme_bw()
+
+#### fst plot in the script compare-sample-SNVs.R and grid with the SNVs and π between samples
+
+uw1_2005_2015_grid <- plot_grid(uw1_snvs_samples, uw1_pi_samples, uw1_2005_2015_fst, labels="AUTO", ncol=1)
+
+ggsave(filename="figures/UW1-IIA-R1R2-R3R4-microdiv-grid.png", uw1_2005_2015_grid, width=15, height=9, units=c("in"))
 
