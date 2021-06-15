@@ -74,7 +74,8 @@ uw1_2005_2015_samples_diff$gene <- sub("^([^_]+_[^_]+_[^_]*).*", "\\1", uw1_2005
 uw1_2005_2015_samples_diff$gene <- trimws(uw1_2005_2015_samples_diff$gene, which=c("right"))
 uw1_2005_2015_samples_diff_index <- left_join(uw1_2005_2015_samples_diff, uw1_gene_info)
 
-uw1_2005_2015_fst <- uw1_2005_2015_samples_diff_index %>% ggplot(aes(x=index, y=fst)) + geom_point(color="tomato3") + scale_y_continuous(limits=c(0,0.5)) + labs(title = "Fst between UW1 IIA R1R2 and R3R4 Populations") + theme_bw()
+uw1_2005_2015_fst <- uw1_2005_2015_samples_diff_index %>% ggplot(aes(x=index, y=fst)) + geom_point(color="tomato3") + scale_y_continuous(limits=c(0,0.5)) + labs(title = "Fst between UW1 IIA R1R2 and R3R4 Populations") + xlab("Gene index") + ylab("Fst") + theme_bw() + theme(axis.title.y=element_text(face="bold"), axis.title.x=element_text(face="bold"))
+uw1_2005_2015_fst
 
 # gene info
 uw1_gene_info <- read_tsv("results/SNVs/R1R2_vs_R3R4/R1R2_2005_UW1_gene_info.tsv") %>% 
@@ -84,6 +85,7 @@ uw1_samples_diff$gene <- sub("^([^_]+_[^_]+_[^_]*).*", "\\1", uw1_samples_diff$g
 uw1_samples_diff$gene <- trimws(uw1_samples_diff$gene, which = c("right"))
 uw1_samples_diff_index <- left_join(uw1_samples_diff, uw1_gene_info)
 
-fst_uw1 <- uw1_samples_diff_index %>% ggplot(aes(x=index, y=fst)) + geom_point(color="darkorchid4") + scale_y_continuous(limits=c(0,1)) + theme_bw() + labs(title = "Fst of UW1 IIA between 2005 and 2013")
+fst_uw1 <- uw1_samples_diff_index %>% ggplot(aes(x=index, y=fst)) + geom_point(color="darkorchid4") + scale_y_continuous(limits=c(0,1)) + xlab("Gene index") + ylab('Fst') + theme_bw() + labs(title = "Fst of UW1 IIA between 2005 and 2013")
+fst_uw1
 
 ggsave("figures/uw1-2005-2013-fst.png", fst_uw1, width=7, height=4.5, units=c('in'))

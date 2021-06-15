@@ -231,12 +231,15 @@ r1r2_2008_grid_pretty
 #################################### 
 
 # Facet by sample instead of overlaid
-uw1_snvs_samples <- uw1_snvs %>% ggplot(aes(x=index, y=SNVs)) + geom_point(color="navyblue") + facet_wrap(~ sample) + labs(title = "UW1 IIA SNVs in R1R2 vs R3R4")  + theme_bw()
-uw1_pi_samples <- uw1_div_comp %>% ggplot(aes(x=index, y=nucleotide_diversity)) + geom_point(color="darkorchid4") + facet_wrap(~ sample) + scale_y_continuous(limits=c(0,0.025)) + labs(title = "UW1 IIA Gene-Specific Nucleotide Diversity in R1R2 vs R3R4") + theme_bw()
-
+supp_labels = c(`R1R2_2005`="R1R2 2005", `R3R4_2015`="R3R4 2015")
+uw1_snvs_samples <- uw1_snvs %>% ggplot(aes(x=index, y=SNVs)) + geom_point(color="navyblue") + facet_wrap(~ sample, labeller=as_labeller(supp_labels)) + labs(title = "UW1 IIA SNVs in R1R2 vs R3R4") + ylab("Number of SNVs") + theme_bw() + theme(axis.title.x=element_blank(), axis.title.y=element_text(face="bold"))
+uw1_snvs_samples
+uw1_pi_samples <- uw1_div_comp %>% ggplot(aes(x=index, y=nucleotide_diversity)) + geom_point(color="darkorchid4") + facet_wrap(~ sample, labeller=as_labeller(supp_labels)) + scale_y_continuous(limits=c(0,0.025)) + ylab("Nucleotide Diversity") + labs(title = "UW1 IIA Gene-Specific Nucleotide Diversity in R1R2 vs R3R4") + theme_bw() + theme(axis.title.x=element_blank(), axis.title.y=element_text(face="bold"))
+uw1_pi_samples
 #### fst plot in the script compare-sample-SNVs.R and grid with the SNVs and π between samples
 
 uw1_2005_2015_grid <- plot_grid(uw1_snvs_samples, uw1_pi_samples, uw1_2005_2015_fst, labels="AUTO", ncol=1)
+uw1_2005_2015_grid
 
 ggsave(filename="figures/UW1-IIA-R1R2-R3R4-microdiv-grid.png", uw1_2005_2015_grid, width=15, height=9, units=c("in"))
 

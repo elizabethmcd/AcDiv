@@ -43,6 +43,7 @@ pob_good_info %>% ggplot(aes(x=sample, y=nucleotide_diversity, group=code, color
 rhodo_div <- pob_good_info %>% 
   filter(code == 'CAPIA' | code == 'CAPIIB' | code == 'CAPIIC' | code == 'DECH1' | code == 'SULF1' | code == 'THAU1')
 
-rhodo_div_plot <- rhodo_div %>% ggplot(aes(x=sample, y=nucleotide_diversity, group=code, color=code)) + geom_point(size=2.5) + geom_line(size=1.5) + theme_bw()
+rhodo_div_plot <- rhodo_div %>% ggplot(aes(x=sample, y=nucleotide_diversity, group=code, color=code)) + geom_point(size=2.5) + geom_line(size=1.5) + theme_bw() + ylab("Nucleotide Diversity\n") + xlab("\nCycle") + scale_x_discrete(labels=c("Cycle 87", "Cycle 103", "Cycle 129")) + labs(color="Genome") + theme(axis.title.y=element_text(face="bold"), axis.title.x=element_text(face="bold"), legend.title=element_text(face="bold"))
+rhodo_div_plot
 
 ggsave(filename="figures/POB-rhodo-div-plot.png", rhodo_div_plot, width=8, height=6, units=c("in"))
