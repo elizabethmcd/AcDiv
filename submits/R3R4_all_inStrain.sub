@@ -1,0 +1,15 @@
+##############################
+# R3R4 all inStrain queue
+##############################
+
+executable = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/executables/R3R4_all_inStrain.sh
+
+request_cpus = 6
+request_memory = 150GB
+arguments = $(genome)
+
+output = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/outs/$(Cluster)_$(Process)_inStrain_R3R4.out
+error = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/errs/$(Cluster)_$(Process)_inStrain_R3R4.err
+log = /home/GLBRCORG/emcdaniel/EBPR/AcDiv/logs/$(Cluster)_$(Process)_inStrain_R3R4.log
+
+queue genome from metadata/R3R4_acc_refs.txt
