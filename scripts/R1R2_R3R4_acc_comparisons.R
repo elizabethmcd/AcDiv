@@ -274,10 +274,14 @@ uw3_snv_diversity <- read_tsv("results/SNVs/R1R2_vs_R3R4/R1R2_2005_UW3_gene_info
   select(gene, SNV_count, nucl_diversity)
 uw3_snv_diversity$index <- seq.int(nrow(uw3_snv_diversity))
 
-uw1_snvs_2005 <- uw1_snv_diversity %>% ggplot(aes(x=index, y=SNV_count)) + geom_point(color="navyblue") + labs(title="UW1 IIA SNVs in R1R2") + xlab("Gene Index") + ylab("Number of SNVs") + theme_bw() 
-uw1_div_2005 <- uw1_snv_diversity %>% ggplot(aes(x=index, y=nucl_diversity)) + geom_point(color="purple") + labs(title="UW1 IIA Nucleotide Diversity in R1R2") + xlab("Gene Index") + ylab("Nucleotide Diversity π") + theme_bw()
-uw3_snvs_2005 <- uw3_snv_diversity %>% ggplot(aes(x=index, y=SNV_count)) + geom_point(color="navyblue") + labs(title="UW3 IA SNVs in R1R2") + xlab("Gene Index") + ylab("Number of SNVs") + theme_bw()
-uw3_div_2005 <- uw3_snv_diversity %>% ggplot(aes(x=index, y=nucl_diversity)) + labs(title="UW3 IA Nucleotide Diversity in R1R2")  + xlab("Gene Index") + ylab("Nucleotide Diversity π") + geom_point(color="purple") + theme_bw()
+uw1_snvs_2005 <- uw1_snv_diversity %>% ggplot(aes(x=index, y=SNV_count)) + geom_point(color="navyblue") + labs(title="UW1 IIA SNVs in R1R2") + xlab("Gene Index") + ylab("Number of SNVs") + scale_y_continuous(limits=c(0,200), breaks=seq(0,200,50)) + theme_bw() 
+uw1_snvs_2005
+uw1_div_2005 <- uw1_snv_diversity %>% ggplot(aes(x=index, y=nucl_diversity)) + geom_point(color="purple") + labs(title="UW1 IIA Nucleotide Diversity in R1R2") + xlab("Gene Index") + ylab("Nucleotide Diversity π") + scale_y_continuous(limits=c(0, .20), breaks=seq(0,.20, .05)) + annotate(geom="text", x=2500, y=.15, label="Genome-Wide π = 0.00093") + theme_bw()
+uw1_div_2005
+uw3_snvs_2005 <- uw3_snv_diversity %>% ggplot(aes(x=index, y=SNV_count)) + geom_point(color="navyblue") + labs(title="UW3 IA SNVs in R1R2") + xlab("Gene Index") + ylab("Number of SNVs") + scale_y_continuous(limits=c(0,200), breaks=seq(0,200,50)) + theme_bw()
+uw3_snvs_2005
+uw3_div_2005 <- uw3_snv_diversity %>% ggplot(aes(x=index, y=nucl_diversity)) + labs(title="UW3 IA Nucleotide Diversity in R1R2")  + xlab("Gene Index") + ylab("Nucleotide Diversity π") + geom_point(color="purple") + scale_y_continuous(limits=c(0, .20), breaks=seq(0,.20, .05)) + annotate(geom="text", x=2500, y=.15, label="Genome-Wide π = 0.00385") + theme_bw()
+uw3_div_2005
 
 title <- ggdraw() + draw_label("Diversity of UW1 and UW3 Populations within the R1R2 Enrichment", fontface="bold")
 p <- plot_grid(uw1_snvs_2005, uw1_div_2005, uw3_snvs_2005, uw3_div_2005, labels="AUTO", ncol=2)
@@ -298,17 +302,24 @@ uw7_snv_diversity <- read_tsv("results/SNVs/R1R2_vs_R3R4/UW7.IS_gene_info.tsv") 
   select(gene, SNV_count, nucl_diversity)
 uw7_snv_diversity$index <- seq.int(nrow(uw7_snv_diversity))
 
-uw5_snvs_2015 <- uw5_snv_diversity %>% ggplot(aes(x=index, y=SNV_count)) + geom_point(color="navyblue") + labs(title="UW5 IIA SNVs in R3R4") + xlab("Gene Index") + ylab("Number of SNVs") + theme_bw() 
-uw5_div_2015 <- uw5_snv_diversity %>% ggplot(aes(x=index, y=nucl_diversity)) + geom_point(color="purple") + labs(title="UW5 IIA Nucleotide Diversity in R3R4") + xlab("Gene Index") + ylab("Nucleotide Diversity π") + theme_bw()
+uw5_snvs_2015 <- uw5_snv_diversity %>% ggplot(aes(x=index, y=SNV_count)) + geom_point(color="navyblue") + labs(title="UW5 IIA SNVs in R3R4") + xlab("Gene Index") + ylab("Number of SNVs") + scale_y_continuous(limits=c(0,200), breaks=seq(0,200,50)) + theme_bw() 
+uw5_snvs_2015
+uw5_div_2015 <- uw5_snv_diversity %>% ggplot(aes(x=index, y=nucl_diversity)) + geom_point(color="purple") + labs(title="UW5 IIA Nucleotide Diversity in R3R4") + xlab("Gene Index") + ylab("Nucleotide Diversity π") + scale_y_continuous(limits=c(0, .20), breaks=seq(0,.20, .05)) + annotate(geom="text", x=2500, y=.15, label="Genome-Wide π = 0.00122") + theme_bw()
+uw5_div_2015
 
-uw7_snvs_2015 <- uw7_snv_diversity %>% ggplot(aes(x=index, y=SNV_count)) + geom_point(color="navyblue") + labs(title="UW7 IIF SNVs in R3R4") + xlab("Gene Index") + ylab("Number of SNVs") + theme_bw() 
-uw7_div_2015 <- uw7_snv_diversity %>% ggplot(aes(x=index, y=nucl_diversity)) + geom_point(color="purple") + labs(title="UW7 IIF Nucleotide Diversity in R3R4") + xlab("Gene Index") + ylab("Nucleotide Diversity π") + theme_bw()
+uw7_snvs_2015 <- uw7_snv_diversity %>% ggplot(aes(x=index, y=SNV_count)) + geom_point(color="navyblue") + labs(title="UW7 IIF SNVs in R3R4") + xlab("Gene Index") + ylab("Number of SNVs") + scale_y_continuous(limits=c(0,200), breaks=seq(0,200,50)) + theme_bw() 
+uw7_snvs_2015
+uw7_div_2015 <- uw7_snv_diversity %>% ggplot(aes(x=index, y=nucl_diversity)) + geom_point(color="purple") + labs(title="UW7 IIF Nucleotide Diversity in R3R4") + xlab("Gene Index") + ylab("Nucleotide Diversity π") + scale_y_continuous(limits=c(0, .20), breaks=seq(0,.20, .05)) + annotate(geom="text", x=2500, y=.15, label="Genome-Wide π = 0.00230") + theme_bw()
+uw7_div_2015
 
 p2 <- plot_grid(uw5_snvs_2015, uw5_div_2015, uw7_snvs_2015, uw7_div_2015, labels=c("E", "F", "G", "H"), ncol = 2)
 title2 <- ggdraw() + draw_label("Diversity of UW5 and UW7 Populations within the R3R4 Enrichment", fontface="bold")
+p2
 
 grid2 <- plot_grid(title2, p2, ncol=1, rel_heights = c(0.1, 1))
 grid2
 
+# r1r2 and r3r4 grids together
 enrichment_grids <- grid.arrange(grid1, grid2, ncol=1)
+enrichment_grids
 ggsave(filename="figures/R1R2-R3R4-Acc-enrichment-diversity.png", enrichment_grids, width=8, height=11, units=c("in"))

@@ -239,7 +239,7 @@ uw1_pi_samples <- uw1_div_comp %>% ggplot(aes(x=index, y=nucleotide_diversity)) 
 uw1_pi_samples
 #### fst plot in the script compare-sample-SNVs.R and grid with the SNVs and π between samples
 
-uw1_2005_2015_grid <- plot_grid(uw1_snvs_samples, uw1_pi_samples, uw1_2005_2015_fst, labels="AUTO", ncol=1)
+uw1_2005_2015_grid <- plot_grid(uw1_snvs_samples, uw1_pi_samples, labels="AUTO", ncol=1)
 uw1_2005_2015_grid
 
 ggsave(filename="figures/UW1-IIA-R1R2-R3R4-microdiv-grid.png", uw1_2005_2015_grid, width=15, height=9, units=c("in"))
