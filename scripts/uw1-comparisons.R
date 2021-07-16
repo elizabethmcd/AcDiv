@@ -11,7 +11,7 @@ files <- dir(uw1_path, pattern="*_gene_info.tsv")
 uw1_snvs <- data_frame(filename = files) %>% 
   mutate(file_contents = map(filename, ~ read_tsv(file.path(uw1_path, .)))
   ) %>% 
-  unnest() 
+  unnest()
 
 uw1_nucl_div <- uw1_snvs %>% 
   select(filename, gene, nucl_diversity) %>% 
