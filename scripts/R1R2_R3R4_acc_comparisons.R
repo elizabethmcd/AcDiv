@@ -276,11 +276,11 @@ uw3_snv_diversity$index <- seq.int(nrow(uw3_snv_diversity))
 
 uw1_snvs_2005 <- uw1_snv_diversity %>% ggplot(aes(x=index, y=SNV_count)) + geom_point(color="navyblue") + labs(title="UW1 IIA SNVs in R1R2") + xlab("Gene Index") + ylab("Number of SNVs") + scale_y_continuous(limits=c(0,200), breaks=seq(0,200,50)) + theme_bw() 
 uw1_snvs_2005
-uw1_div_2005 <- uw1_snv_diversity %>% ggplot(aes(x=index, y=nucl_diversity)) + geom_point(color="purple") + labs(title="UW1 IIA Nucleotide Diversity in R1R2") + xlab("Gene Index") + ylab("Nucleotide Diversity π") + scale_y_continuous(limits=c(0, .20), breaks=seq(0,.20, .05)) + annotate(geom="text", x=2500, y=.15, label="Genome-Wide π = 0.00093") + theme_bw()
+uw1_div_2005 <- uw1_snv_diversity %>% ggplot(aes(x=index, y=nucl_diversity)) + geom_point(color="purple") + labs(title="UW1 IIA Nucleotide Diversity in R1R2") + xlab("Gene Index") + ylab("Nucleotide Diversity") + scale_y_continuous(limits=c(0, .20), breaks=seq(0,.20, .05)) + annotate(geom="text", x=2500, y=.15, label="Genome-Wide π = 0.00093") + theme_bw()
 uw1_div_2005
 uw3_snvs_2005 <- uw3_snv_diversity %>% ggplot(aes(x=index, y=SNV_count)) + geom_point(color="navyblue") + labs(title="UW3 IA SNVs in R1R2") + xlab("Gene Index") + ylab("Number of SNVs") + scale_y_continuous(limits=c(0,200), breaks=seq(0,200,50)) + theme_bw()
 uw3_snvs_2005
-uw3_div_2005 <- uw3_snv_diversity %>% ggplot(aes(x=index, y=nucl_diversity)) + labs(title="UW3 IA Nucleotide Diversity in R1R2")  + xlab("Gene Index") + ylab("Nucleotide Diversity π") + geom_point(color="purple") + scale_y_continuous(limits=c(0, .20), breaks=seq(0,.20, .05)) + annotate(geom="text", x=2500, y=.15, label="Genome-Wide π = 0.00385") + theme_bw()
+uw3_div_2005 <- uw3_snv_diversity %>% ggplot(aes(x=index, y=nucl_diversity)) + labs(title="UW3 IA Nucleotide Diversity in R1R2")  + xlab("Gene Index") + ylab("Nucleotide Diversity") + geom_point(color="purple") + scale_y_continuous(limits=c(0, .20), breaks=seq(0,.20, .05)) + annotate(geom="text", x=2500, y=.15, label="Genome-Wide π = 0.00385") + theme_bw()
 uw3_div_2005
 
 title <- ggdraw() + draw_label("Diversity of UW1 and UW3 Populations within the R1R2 Enrichment", fontface="bold")
@@ -305,12 +305,12 @@ uw7_snv_diversity$index <- paste(formatC(uw7_snv_diversity$index, width=5, flag=
 
 uw5_snvs_2015 <- uw5_snv_diversity %>% ggplot(aes(x=index, y=SNV_count)) + geom_point(color="navyblue") + labs(title="UW5 IIA SNVs in R3R4") + xlab("Gene Index") + ylab("Number of SNVs") + scale_y_continuous(limits=c(0,200), breaks=seq(0,200,50)) + theme_bw() 
 uw5_snvs_2015
-uw5_div_2015 <- uw5_snv_diversity %>% ggplot(aes(x=index, y=nucl_diversity)) + geom_point(color="purple") + labs(title="UW5 IIA Nucleotide Diversity in R3R4") + xlab("Gene Index") + ylab("Nucleotide Diversity π") + scale_y_continuous(limits=c(0, .20), breaks=seq(0,.20, .05)) + annotate(geom="text", x=2500, y=.15, label="Genome-Wide π = 0.00122") + theme_bw()
+uw5_div_2015 <- uw5_snv_diversity %>% ggplot(aes(x=index, y=nucl_diversity)) + geom_point(color="purple") + labs(title="UW5 IIA Nucleotide Diversity in R3R4") + xlab("Gene Index") + ylab("Nucleotide Diversity") + scale_y_continuous(limits=c(0, .20), breaks=seq(0,.20, .05)) + annotate(geom="text", x=2500, y=.15, label="Genome-Wide π = 0.00122") + theme_bw()
 uw5_div_2015
 
 uw7_snvs_2015 <- uw7_snv_diversity %>% ggplot(aes(x=index, y=SNV_count)) + geom_point(color="navyblue") + labs(title="UW7 IIF SNVs in R3R4") + xlab("Gene Index") + ylab("Number of SNVs") + scale_y_continuous(limits=c(0,200), breaks=seq(0,200,50)) + theme_bw() 
 uw7_snvs_2015
-uw7_div_2015 <- uw7_snv_diversity %>% ggplot(aes(x=index, y=nucl_diversity)) + geom_point(color="purple") + labs(title="UW7 IIF Nucleotide Diversity in R3R4") + xlab("Gene Index") + ylab("Nucleotide Diversity π") + scale_y_continuous(limits=c(0, .20), breaks=seq(0,.20, .05)) + annotate(geom="text", x=2500, y=.15, label="Genome-Wide π = 0.00230") + theme_bw()
+uw7_div_2015 <- uw7_snv_diversity %>% ggplot(aes(x=index, y=nucl_diversity)) + geom_point(color="purple") + labs(title="UW7 IIF Nucleotide Diversity in R3R4") + xlab("Gene Index") + ylab("Nucleotide Diversity") + scale_y_continuous(limits=c(0, .20), breaks=seq(0,.20, .05)) + annotate(geom="text", x=2500, y=.15, label="Genome-Wide π = 0.00230") + theme_bw()
 uw7_div_2015
 
 p2 <- plot_grid(uw5_snvs_2015, uw5_div_2015, uw7_snvs_2015, uw7_div_2015, labels=c("E", "F", "G", "H"), ncol = 2)
@@ -349,6 +349,10 @@ uw1_acc_core_div <- left_join(uw1_acc_core, uw1_snv_diversity) %>%
   select(group, gene, label, nucl_diversity) %>% 
   mutate(ref = c("UW1"))
 
+uw1_accessory_div <- left_join(clade_IIA_ortho_tags, uw1_snv_diversity) %>% 
+  filter(ref =='UW1') %>% 
+  select(group, gene, label, nucl_diversity, ref)
+
 uw3_snv_diversity$gene <- gsub("gnl\\|X\\|", "", uw3_snv_diversity$gene) 
 
 uw3_core <- core_locus_tags %>% 
@@ -369,6 +373,9 @@ uw3_acc_core_div <- left_join(uw3_acc_core, uw3_snv_diversity) %>%
   select(group, gene, label, nucl_diversity) %>% 
   mutate(ref = c("UW3"))
 
+uw3_accessory_div <- left_join(clade_IA_ortho_tags, uw3_snv_diversity) %>% 
+  select(group, gene, label, nucl_diversity, ref)
+
 uw5_snv_diversity$gene <- gsub("gnl\\|X\\|", "", uw5_snv_diversity$gene)
 
 uw5_core <- core_locus_tags %>% 
@@ -388,6 +395,10 @@ uw5_core_div <- left_join(uw5_core, uw5_snv_diversity) %>%
 uw5_acc_core_div <- left_join(uw5_acc_core, uw5_snv_diversity) %>% 
   select(group, gene, label, nucl_diversity) %>% 
   mutate(ref = c("UW5"))
+
+uw5_accessory_div <- left_join(clade_IIA_ortho_tags, uw5_snv_diversity) %>% 
+  filter(ref == 'UW5') %>% 
+  select(group, gene, label, nucl_diversity, ref)
 
 uw7_snv_diversity$gene <- gsub("gnl\\|X\\|", "", uw7_snv_diversity$gene)
 uw7_snv_diversity$gene <- gsub("_.*", "", uw7_snv_diversity$gene)
@@ -414,6 +425,17 @@ uw7_acc_core_div <- left_join(uw7_acc_core, uw7_snv_diversity_modf) %>%
   select(group, gene, label, nucl_diversity) %>% 
   mutate(ref = c("UW7"))
 
-all_uw_groups_div <- rbind(uw1_core_div, uw3_core_div, uw5_core_div, uw1_acc_core_div, uw3_acc_core_div, uw5_acc_core_div, uw7_core_div, uw7_acc_core_div)
+colnames(clade_IIF_ortho_tags) <- c("group", "locus_tag", "label", "ref")
+uw7_accessory_div <- left_join(clade_IIF_ortho_tags, uw7_snv_diversity) %>% 
+  select(group, locus_tag, label, nucl_diversity, ref)
+colnames(uw7_accessory_div) <- c("group", "gene", "label", "nucl_diversity", "ref")
 
-all_uw_groups_div %>% ggplot(aes(x=ref, y=nucl_diversity, fill=label)) + geom_boxplot() + theme_classic()
+all_uw_groups_div <- rbind(uw1_core_div, uw3_core_div, uw5_core_div, uw1_acc_core_div, uw3_acc_core_div, uw5_acc_core_div, uw7_core_div, uw7_acc_core_div, uw1_accessory_div, uw3_accessory_div, uw5_accessory_div, uw7_accessory_div)
+
+all_uw_groups_div$label <- factor(all_uw_groups_div$label, levels=c("core", "acc_core", "accessory"))
+
+uw_genes_div <- all_uw_groups_div %>% ggplot(aes(x=ref, y=nucl_diversity, fill=factor(label))) + geom_boxplot() + theme_classic() + scale_fill_brewer(labels = c("Single Copy Core Genes", "Single Copy Core Genes in Accumulibacter", "Accessory Clade Genes"), name = "Gene Type") + xlab("UW Accumulibacter Reference Genome") + ylab("Nucleotide Diversity") + scale_x_discrete(labels = c("UW1-IIA", "UW3-IA", "UW5-IIA", "UW7-IIF")) + scale_y_continuous(limits=c(0, 0.020), breaks=seq(0,0.020, 0.005)) + labs(tag="I") + theme(axis.title.x=element_blank(), legend.position="bottom", plot.tag=element_text(face="bold"))
+
+uw_enrichment_plot <- plot_grid(enrichment_grids, uw_genes_div, ncol=1, rel_heights= c(0.80, 0.20))
+
+ggsave("figures/UW-R1R2-R3R4-enrichment-plots.png", uw_enrichment_plot, height=11, width=8, units=c("in"))

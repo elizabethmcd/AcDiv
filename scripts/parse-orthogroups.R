@@ -103,6 +103,32 @@ uw3_only_table <- as.data.frame(uw3_only_groups)
 uw3_only_table$label <- "accessory"
 colnames(uw3_only_table)[1] <- "group"
 
+
+#### accessory clade orthologs
+# only in clade IIA 
+
+clade_IIA_orthogroups <- homolog_table %>% 
+  rownames_to_column('group') %>% 
+  mutate(sum = rowSums(across(where(is.numeric)))) %>% 
+  filter(sum < 4) %>% 
+  filter(UW1 == 1 & UW5 == 1 & UW9.POB == 1) %>% 
+  pull(group)
+
+clade_IA_orthogroups <- homolog_table %>% 
+  rownames_to_column('group') %>% 
+  mutate(sum = rowSums(across(where(is.numeric)))) %>% 
+  filter(sum < 6) %>% 
+  filter(UW3 == 1 & GCA_009467855.1 == 1 & UW4 == 1 & UW8.POB == 1 & GCA_000585075.1 == 1) %>% 
+  pull(group)
+
+clade_IIF_orthogroups <- homolog_table %>% 
+  rownames_to_column('group') %>% 
+  mutate(sum = rowSums(across(where(is.numeric)))) %>% 
+  filter(sum < 6) %>% 
+  filter(UW7 == 1 & UW13.POB == 1 & GCA_005524045.1 == 1 & GCA_013347225.1 == 1 & GCA_000585015.1 == 1) %>% 
+  pull(group)
+
+
 # groups to locus tags
 # Do for UW1, UW3, UW5, and UW7 to show for the beginning enrichment SNVs/diversity of those loci?
 # Gene nucleotide diversity by the locus tag
@@ -118,6 +144,29 @@ core_locus_tags <- left_join(core_table, uw_locus_tags)
 acc_locus_tags <- left_join(acc_only_final_table, uw_locus_tags)
 
 uw3_accessory_locus_tags <- left_join(uw3_only_table, uw_locus_tags)
+
+clade_IA_ortho_table <- as.data.frame(clade_IA_orthogroups) 
+colnames(clade_IA_ortho_table) <- c("group")
+clade_IA_ortho_tags <- left_join(clade_IA_ortho_table, uw_locus_tags) %>% 
+  select(group, UW3) %>% 
+  mutate(label = c("accessory")) %>% 
+  mutate(ref = c("UW3"))
+colnames(clade_IA_ortho_tags) <- c("group", "gene", "label", "ref")
+
+clade_IIA_ortho_table <- as.data.frame(clade_IIA_orthogroups)
+colnames(clade_IIA_ortho_table) <- c("group")
+clade_IIA_ortho_tags <- left_join(clade_IIA_ortho_table, uw_locus_tags) %>% 
+  select(group, UW1, UW5) %>% 
+  pivot_longer(!group, names_to="ref", values_to="gene") %>%
+  mutate(label = c("accessory"))
+
+clade_IIF_ortho_table <- as.data.frame(clade_IIF_orthogroups)
+colnames(clade_IIF_ortho_table) <- c("group")
+clade_IIF_ortho_tags <- left_join(clade_IIF_ortho_table, uw_locus_tags) %>% 
+  select(group, UW7) %>% 
+  mutate(label = "accessory") %>% 
+  mutate(ref = "UW7")
+colnames(clade_IIF_ortho_tags) <- c("group", "gene", "label", "ref")
 
 # UW1 SNVs to ortholog definitions
 uw1_core_locus_tags <- core_locus_tags %>% 
