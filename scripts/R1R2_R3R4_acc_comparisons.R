@@ -323,3 +323,87 @@ grid2
 enrichment_grids <- grid.arrange(grid1, grid2, ncol=1)
 enrichment_grids
 ggsave(filename="figures/R1R2-R3R4-Acc-enrichment-diversity.png", enrichment_grids, width=8, height=11, units=c("in"))
+
+####################################  
+# Core and Acc Core Locus Tags to Diversity of those Genes for Each of the 4 genomes 
+#################################### 
+
+uw1_snv_diversity$gene <- gsub("gnl\\|X\\|", "", uw1_snv_diversity$gene)
+
+uw1_core <- core_locus_tags %>% 
+  select(group, UW1, label) %>% 
+  mutate(gene = UW1) %>% 
+  select(group, gene, label)
+
+uw1_acc_core <- acc_locus_tags %>% 
+  select(group, UW1, label) %>% 
+  mutate(gene = UW1) %>% 
+  select(group, gene, label)
+
+uw1_core_div <- left_join(uw1_core, uw1_snv_diversity) %>% 
+  select(group, gene, label, nucl_diversity) %>% 
+  mutate(ref = c("UW1"))
+
+uw1_acc_core_div <- left_join(uw1_acc_core, uw1_snv_diversity) %>% 
+  select(group, gene, label, nucl_diversity) %>% 
+  mutate(ref = c("UW1"))
+
+uw3_snv_diversity$gene <- gsub("gnl\\|X\\|", "", uw3_snv_diversity$gene) 
+
+uw3_core <- core_locus_tags %>% 
+  select(group, UW3, label) %>% 
+  mutate(gene = UW3) %>% 
+  select(group, gene, label)
+
+uw3_acc_core <- acc_locus_tags %>% 
+  select(group, UW3, label) %>% 
+  mutate(gene = UW3) %>% 
+  select(group, gene, label)
+
+uw3_core_div <- left_join(uw3_core, uw3_snv_diversity) %>% 
+  select(group, gene, label, nucl_diversity) %>% 
+  mutate(ref = c("UW3"))
+
+uw3_acc_core_div <- left_join(uw3_acc_core, uw3_snv_diversity) %>% 
+  select(group, gene, label, nucl_diversity) %>% 
+  mutate(ref = c("UW3"))
+
+uw5_snv_diversity$gene <- gsub("gnl\\|X\\|", "", uw5_snv_diversity$gene)
+
+uw5_core <- core_locus_tags %>% 
+  select(group, UW5, label) %>% 
+  mutate(gene = UW5) %>% 
+  select(group, gene, label)
+
+uw5_acc_core <- acc_locus_tags %>% 
+  select(group, UW5, label) %>% 
+  mutate(gene = UW5) %>% 
+  select(group, gene, label)
+
+uw5_core_div <- left_join(uw5_core, uw5_snv_diversity) %>% 
+  select(group, gene, label, nucl_diversity) %>% 
+  mutate(ref = c("UW5"))
+
+uw5_acc_core_div <- left_join(uw5_acc_core, uw5_snv_diversity) %>% 
+  select(group, gene, label, nucl_diversity) %>% 
+  mutate(ref = c("UW5"))
+
+uw7_snv_diversity$gene <- gsub("gnl\\|X\\|", "", uw7_snv_diversity$gene)
+uw7_snv_diversity$gene <- gsub("_.*", "", uw7_snv_diversity$gene)
+
+
+uw7_core <- core_locus_tags %>% 
+  select(group, UW7, label) %>% 
+  mutate(gene = UW7) %>% 
+  select(group, gene, label)
+
+
+uw7_core_div <- left_join(uw7_core, uw7_snv_diversity) %>% 
+  select(group, gene, label, nucl_diversity) %>% 
+  mutate(ref = c("UW7"))
+
+head(uw7_snv_diversity)
+
+all_uw_groups_div <- rbind(uw1_core_div, uw3_core_div, uw5_core_div, uw1_acc_core_div, uw3_acc_core_div, uw5_acc_core_div)
+
+all_uw_groups_div %>% ggplot(aes(x=ref, y=nucl_diversity, fill=label)) + geom_boxplot() + theme_classic()
