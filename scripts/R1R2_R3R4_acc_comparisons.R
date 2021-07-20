@@ -301,6 +301,7 @@ uw5_snv_diversity$index <- seq.int(nrow(uw5_snv_diversity))
 uw7_snv_diversity <- read_tsv("results/SNVs/R1R2_vs_R3R4/UW7.IS_gene_info.tsv") %>% 
   select(gene, SNV_count, nucl_diversity)
 uw7_snv_diversity$index <- seq.int(nrow(uw7_snv_diversity))
+uw7_snv_diversity$index <- paste(formatC(uw7_snv_diversity$index, width=5, flag="0"))
 
 uw5_snvs_2015 <- uw5_snv_diversity %>% ggplot(aes(x=index, y=SNV_count)) + geom_point(color="navyblue") + labs(title="UW5 IIA SNVs in R3R4") + xlab("Gene Index") + ylab("Number of SNVs") + scale_y_continuous(limits=c(0,200), breaks=seq(0,200,50)) + theme_bw() 
 uw5_snvs_2015
@@ -390,20 +391,29 @@ uw5_acc_core_div <- left_join(uw5_acc_core, uw5_snv_diversity) %>%
 
 uw7_snv_diversity$gene <- gsub("gnl\\|X\\|", "", uw7_snv_diversity$gene)
 uw7_snv_diversity$gene <- gsub("_.*", "", uw7_snv_diversity$gene)
-
-
+uw7_snv_diversity$locus_tag <- paste(uw7_snv_diversity$gene, uw7_snv_diversity$index, sep="_")
+uw7_snv_diversity_modf <- uw7_snv_diversity %>% 
+  mutate(gene = locus_tag) %>% 
+  select(gene, SNV_count, nucl_diversity, index)
+  
 uw7_core <- core_locus_tags %>% 
   select(group, UW7, label) %>% 
   mutate(gene = UW7) %>% 
   select(group, gene, label)
 
+uw7_acc_core <- acc_locus_tags %>% 
+  select(group, UW7, label) %>% 
+  mutate(gene = UW7) %>%
+  select(group, gene, label)
 
-uw7_core_div <- left_join(uw7_core, uw7_snv_diversity) %>% 
+uw7_core_div <- left_join(uw7_core, uw7_snv_diversity_modf) %>% 
   select(group, gene, label, nucl_diversity) %>% 
   mutate(ref = c("UW7"))
 
-head(uw7_snv_diversity)
+uw7_acc_core_div <- left_join(uw7_acc_core, uw7_snv_diversity_modf) %>% 
+  select(group, gene, label, nucl_diversity) %>% 
+  mutate(ref = c("UW7"))
 
-all_uw_groups_div <- rbind(uw1_core_div, uw3_core_div, uw5_core_div, uw1_acc_core_div, uw3_acc_core_div, uw5_acc_core_div)
+all_uw_groups_div <- rbind(uw1_core_div, uw3_core_div, uw5_core_div, uw1_acc_core_div, uw3_acc_core_div, uw5_acc_core_div, uw7_core_div, uw7_acc_core_div)
 
 all_uw_groups_div %>% ggplot(aes(x=ref, y=nucl_diversity, fill=label)) + geom_boxplot() + theme_classic()
