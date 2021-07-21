@@ -74,7 +74,7 @@ uw1_2005_2015_samples_diff$gene <- sub("^([^_]+_[^_]+_[^_]*).*", "\\1", uw1_2005
 uw1_2005_2015_samples_diff$gene <- trimws(uw1_2005_2015_samples_diff$gene, which=c("right"))
 uw1_2005_2015_samples_diff_index <- left_join(uw1_2005_2015_samples_diff, uw1_gene_info)
 
-uw1_2005_2015_fst <- uw1_2005_2015_samples_diff_index %>% ggplot(aes(x=index, y=fst)) + geom_point(color="tomato3") + scale_y_continuous(limits=c(0,0.5)) + scale_x_continuous(breaks=seq(0,5000, 500)) + labs(title = "Fst between UW1 IIA R1R2 and R3R4 Populations") + xlab("Gene index") + ylab("Fst") + theme_bw() + theme(axis.title.y=element_text(face="bold"), axis.title.x=element_text(face="bold"))
+uw1_2005_2015_fst <- uw1_2005_2015_samples_diff_index %>% ggplot(aes(x=index, y=fst)) + geom_point(color="tomato3") + scale_y_continuous(limits=c(0,1)) + scale_x_continuous(breaks=seq(0,5000, 500)) + labs(title = "Fst between UW1 IIA R1R2 and R3R4 Populations") + xlab("Gene index") + ylab("Fst") + theme_bw() + theme(axis.title.y=element_text(face="bold"), axis.title.x=element_text(face="bold"))
 uw1_2005_2015_fst
 ggsave("figures/uw1_2005_2015_fst_comparisons.png", uw1_2005_2015_fst, width=11, height=5, units=c("in"))
 
@@ -94,10 +94,42 @@ ggsave("figures/uw1-2005-2013-fst.png", fst_uw1, width=7, height=4.5, units=c('i
 # genes with high fst between r1r2 and r3r4
 
 high_fst <- uw1_2005_2015_samples_diff_index %>% 
-  filter(fst > 0.2)
+  filter(fst > 0.2) %>% 
+  select(gene, r1r2_2005, r3r4_2015, fst)
+high_fst$gene <- gsub("gnl\\|X\\|", "", high_fst$gene)
+
+r1r2_high_fst <- left_join(high_fst, uw1_snv_diversity)
+colnames(r1r2_high_fst) <- c("gene", "r1r2_2005", "r3r4_2015", "fst", "r1r2_SNV_count", "r1r2_nucl_diversity", "index")
+
+
+uw1_2015_div <- read_tsv("results/SNVs/R1R2_vs_R3R4/R3R4_2015_UW1_gene_info.tsv") %>% 
+  select(gene, SNV_count, nucl_diversity)
+uw1_2015_div$gene <- gsub("gnl\\|X\\|", "", uw1_2015_div$gene)
+
+uw1_r1r2_r3r4_fst <- left_join(r1r2_high_fst, uw1_2015_div) %>% 
+  select(gene, r1r2_2005, r3r4_2015, fst, r1r2_SNV_count, r1r2_nucl_diversity, SNV_count, nucl_diversity, index)
+colnames(uw1_r1r2_r3r4_fst) <- c("gene", "r1r2_2005", "r3r4_2015", "fst", "r1r2_SNV_count", "r1r2_nucl_diversity", "r3r4_SNV_count", "r3r4_nucl_diversity", "index")
+
+high_r1r2_r3r4_fst_div <- uw1_r1r2_r3r4_fst %>% 
+  select(gene, r1r2_nucl_diversity, r3r4_nucl_diversity) %>%
+  pivot_longer(!gene, names_to=c("timepoint"), values_to=c("nucleotide_diversity"))
+
+high_r1r2_r3r4_fst_div %>% ggplot(aes(x=timepoint, y=nucleotide_diversity, fill=gene)) + geom_point() + geom_line()
+  
 fst_count <- high_fst %>% 
   group_by(gene) %>% 
   summarize(Count = n()) %>% 
   ungroup() %>% 
   arrange(desc(Count))
-  
+
+uw1_2005_2015_fst_avg <- uw1_2005_2015_samples_diff_index %>% 
+  select(index, gene, fst) %>% 
+  group_by(index, gene) %>% 
+  summarize(mean(fst))
+colnames(uw1_2005_2015_fst_avg) <- c("index", "gene", "Fst")
+
+uw1_2005_2015_fst_avg %>% ggplot(aes(x=index, y=Fst)) + geom_point(color="tomato3") + scale_y_continuous(limits=c(0,0.5), expand=c(0,0)) + scale_x_continuous(limits=c(0,4500), breaks=seq(0,4500, 500)) + labs(title = "Fst between UW1 IIA R1R2 and R3R4 Populations") + xlab("Gene index") + ylab("Fst") + theme_bw() + theme(axis.title.y=element_text(face="bold"), axis.title.x=element_text(face="bold"))
+
+
+uw1_2005_2015_fst_avg %>% 
+  filter(Fst > 0.2)
