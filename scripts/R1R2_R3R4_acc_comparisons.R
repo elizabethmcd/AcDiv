@@ -267,11 +267,11 @@ ggsave("figures/UW5-R3R4-2015-diversity.png", uw5_grid, width=12, height=5, unit
 # UW1 and UW3 2005 IA and IIA R1R2 populations to compare within-reactor variation
 #################################### 
 uw1_snv_diversity <- read_tsv("results/SNVs/R1R2_vs_R3R4/R1R2_2005_UW1_gene_info.tsv") %>% 
-  select(gene, SNV_count, nucl_diversity)
+  select(gene, coverage, SNV_count, nucl_diversity)
 uw1_snv_diversity$index <- seq.int(nrow(uw1_snv_diversity))
 
 uw3_snv_diversity <- read_tsv("results/SNVs/R1R2_vs_R3R4/R1R2_2005_UW3_gene_info.tsv") %>% 
-  select(gene, SNV_count, nucl_diversity)
+  select(gene, SNV_count, coverage, nucl_diversity)
 uw3_snv_diversity$index <- seq.int(nrow(uw3_snv_diversity))
 
 uw1_snvs_2005 <- uw1_snv_diversity %>% ggplot(aes(x=index, y=SNV_count)) + geom_point(color="navyblue") + labs(title="UW1 IIA SNVs in R1R2") + xlab("Gene Index") + ylab("Number of SNVs") + scale_y_continuous(limits=c(0,200), breaks=seq(0,200,50)) + theme_bw() 
@@ -295,7 +295,7 @@ ggsave("figures/R1R2-UW1-UW3-within-div.png", p, width=12, height=8, units=c("in
 #################################### 
 
 uw5_snv_diversity <- read_tsv('results/SNVs/R1R2_vs_R3R4/UW5.IS_gene_info.tsv') %>% 
-  select(gene, SNV_count, nucl_diversity)
+  select(gene, SNV_count, coverage, nucl_diversity)
 uw5_snv_diversity$index <- seq.int(nrow(uw5_snv_diversity))
 
 uw7_snv_diversity <- read_tsv("results/SNVs/R1R2_vs_R3R4/UW7.IS_gene_info.tsv") %>% 
