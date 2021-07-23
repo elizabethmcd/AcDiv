@@ -128,8 +128,9 @@ uw1_2005_2015_fst_avg <- uw1_2005_2015_samples_diff_index %>%
   summarize(mean(fst))
 colnames(uw1_2005_2015_fst_avg) <- c("index", "gene", "Fst")
 
-uw1_2005_2015_fst_avg %>% ggplot(aes(x=index, y=Fst)) + geom_point(color="tomato3") + scale_y_continuous(limits=c(0,0.5), expand=c(0,0)) + scale_x_continuous(limits=c(0,4500), breaks=seq(0,4500, 500)) + labs(title = "Fst between UW1 IIA R1R2 and R3R4 Populations") + xlab("Gene index") + ylab("Fst") + theme_bw() + theme(axis.title.y=element_text(face="bold"), axis.title.x=element_text(face="bold"))
+uw1_fst_avg_plot <- uw1_2005_2015_fst_avg %>% ggplot(aes(x=index, y=Fst)) + geom_point(color="tomato3") + scale_y_continuous(limits=c(0,0.5), expand=c(0,0)) + scale_x_continuous(limits=c(0,4500), breaks=seq(0,4500, 500)) + labs(title = "Fst between UW1 IIA R1R2 and R3R4 Populations") + xlab("Gene index") + ylab("Fst") + theme_bw() + theme(axis.title.y=element_text(face="bold"), axis.title.x=element_text(face="bold"))
 
+ggsave("figures/UW1-FST-avg-plot.png", uw1_fst_avg_plot, width=8, height=4, units=c("in"))
 
 uw1_2005_2015_fst_avg %>% 
   filter(Fst > 0.2)
