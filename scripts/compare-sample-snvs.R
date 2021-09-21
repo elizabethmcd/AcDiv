@@ -132,5 +132,5 @@ uw1_fst_avg_plot <- uw1_2005_2015_fst_avg %>% ggplot(aes(x=index, y=Fst)) + geom
 
 ggsave("figures/UW1-FST-avg-plot.png", uw1_fst_avg_plot, width=8, height=4, units=c("in"))
 
-uw1_2005_2015_fst_avg %>% 
+avg <- uw1_2005_2015_fst_avg %>% 
   filter(Fst > 0.2)
