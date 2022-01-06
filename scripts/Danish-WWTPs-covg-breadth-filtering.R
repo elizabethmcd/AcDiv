@@ -107,3 +107,22 @@ high_all_groups <- filtered_stringent_multiple_genomes_all %>% count(genome, GTD
 
 write.csv(filtered_stringent_multiple_genomes_all, "results/relative_abundance/all-filtered-genomes-WWTPs-stringent-cutoffs.csv", quote=FALSE, row.names = FALSE)
 write.csv(high_all_groups, "results/relative_abundance/all-filtered-genomes-sample-counts-WWTPs.csv", row.names = FALSE, quote=FALSE)
+
+
+# Getting genome/sample pairs that are above 10X and breadth above 90%
+
+all_coverage <- read.csv("results/covg_breadth/Danish-WWTPs-curated-coverage.csv")
+all_breadth <- read.csv("results/covg_breadth/Danish-WWTPs-breadth-curated.csv")
+
+wwtp_coverage_melted <- melt(all_coverage, id.vars="genome", variable="sample", value.name = "coverage")
+wwtp_breadth_melted <- melt(all_breadth, id.vars = "genome", variable="sample", value.name="breadth")
+
+wwtp_info <- left_join(wwtp_coverage_melted, wwtp_breadth_melted)
+
+wwtp_filtered <- wwtp_info %>% 
+  filter(coverage > 10, breadth > 0.9)
+wwtp_filtered$sample <- gsub('\\.', '-', wwtp_filtered$sample)
+wwtp_pairs <- wwtp_filtered %>%
+  select(sample, genome)
+wwtp_pairs$sample <- paste(wwtp_pairs$sample, "spRep.sorted.bam", sep="-")
+write_delim(wwtp_pairs, "~/Desktop/McMahon-Lab/MicDiv/queues/Danish-WWTP-inStrain-10Xcovg-queues.txt", delim="\t", col_names = FALSE)

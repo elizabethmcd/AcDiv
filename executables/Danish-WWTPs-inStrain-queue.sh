@@ -23,4 +23,4 @@ cd /home/GLBRCORG/emcdaniel/EBPR/AcDiv/metagenomes/Danish-WWTPs/mappingResults
 
 # profile command
 
-inStrain profile $mapping $fasta -o ../inStrain/$plant/$genomeName.IS -p 8 -g $genes -s ../inStrain/Singleton-SPREP.stb
+inStrain profile --pairing_filter all_reads $mapping $fasta -o ../inStrain/$plant/$genomeName.IS -p 8 -g $genes -s ../inStrain/Singleton-SPREP.stb

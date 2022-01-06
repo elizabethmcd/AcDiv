@@ -17,4 +17,4 @@ genomePath=/home/GLBRCORG/emcdaniel/EBPR/AcDiv/ref_genomes/POB_genomes
 # cd to mapping directory
 cd /home/GLBRCORG/emcdaniel/EBPR/AcDiv/metagenomes/POB/mappingResults
 
-inStrain profile $mapping $genomePath/$genome.fa -o ../inStrain/$sample/$code.IS -p 8 -g $genomePath/$genome.genes.fna -s ../inStrain/POB-scaffolds-to-bins.stb
+inStrain profile --pairing_filter all_reads $mapping $genomePath/$genome.fa -o ../inStrain/$sample/$code.IS -p 8 -g $genomePath/$genome.genes.fna -s ../inStrain/POB-scaffolds-to-bins.stb
